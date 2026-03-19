@@ -1,20 +1,20 @@
 {
   "schema": "autoskill.document.evidence_manifest.v1",
-  "generated_at": "2026-03-16T06:14:36+00:00",
+  "generated_at": "2026-03-19T09:33:32+00:00",
   "family_name": "认知行为疗法",
-  "skill_id": "7d4c152e-cb38-5cd1-ade8-23aaaf62c840",
+  "skill_id": "7c78a73e-6761-5bf6-9091-4e1285dae571",
   "skill_name": "ABC理论核心领悟引导",
   "support_count": 1,
   "supports": [
     {
-      "support_id": "b10d9e55-79c0-5e83-884c-8ba4285aab2f",
+      "support_id": "ff3d22ac-6efe-5d6f-9779-9ebe56e99ca3",
       "doc_id": "df0c1628-fa32-54ae-b861-2583ccd272f7",
       "document_title": "1例一般心理问题咨询案例_马秀花.md",
       "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例一般心理问题咨询案例_马秀花.md",
-      "section": "6.2第二次：心理咨询阶段",
+      "section": "# 6 咨询过程",
       "span": {
-        "start": 5900,
-        "end": 6096
+        "start": 5913,
+        "end": 6109
       },
       "relation_type": "support",
       "confidence": 0.95,
@@ -30,37 +30,43 @@
         "asset_path": "family_root/treatment_framework/session_framework",
         "asset_level": 2,
         "visible_role": "parent",
-        "objective": "促成求助者对ABC理论的核心认知领悟",
-        "task_family": "心理咨询",
-        "method_family": "CBT（认知行为疗法）",
-        "stage": "心理咨询中期（认知重构准备期）",
+        "objective": "促成求助者对‘情绪源于信念而非事件’的核心领悟",
+        "task_family": "cognitive restructuring",
+        "method_family": "CBT",
+        "stage": "early intervention",
         "domain_type": "psychology",
         "taxonomy_id": "psychology",
-        "window_id": "aed1ab1a-1203-5c5e-8689-60f341c2e53f",
+        "window_id": "f1bb1cea-b927-56f2-937e-fbf9d36de58c",
         "window_strategy": "strict",
         "anchor_hits": [
           "家庭作业",
           "作业"
         ],
-        "paragraph_start": 13,
-        "paragraph_end": 15,
+        "paragraph_start": 15,
+        "paragraph_end": 17,
         "heading_path": [
-          "6.2第二次：心理咨询阶段"
+          "# 6 咨询过程"
         ],
         "parent_heading": "",
         "sibling_headings": [
-          "1例一般心理问题咨询案例",
-          "1.1人口学资料",
-          "1.2个人成长史",
-          "2.1主诉",
-          "2.2个人陈述",
-          "3.1咨询前心理测验结果"
+          "# 1例一般心理问题咨询案例",
+          "# 1一般资料",
+          "# 2 主诉和个人陈述",
+          "# 3评估",
+          "# 4 咨询目标的制定",
+          "# 5制定咨询方案"
         ],
-        "subsection_headings": [],
+        "subsection_headings": [
+          "# 6.1第一次：心理评估",
+          "# 6.2第二次：心理咨询阶段",
+          "# 6.3第三次：心理咨询阶段",
+          "# 6.4第四次：心理咨询阶段",
+          "# 6.5 第五次：巩固和结束阶段"
+        ],
         "context_snippets": [],
         "heading_number": "",
-        "heading_kind": "markdown",
-        "section_summary": "（1）目的： $\\textcircled{1}$ 通过咨询，帮助咨询者认识到不合理的信念B是导致不良情绪及行为后果C的原因，而不是诱发事件A本身； $\\textcircled{2}$ 求助者应对自己的情绪和行为负责； $\\textcircled{3}$ 只有通过改变不合理信念，才能有效减轻或消除目前存在的各种心理症状。（2）方法：腹式呼吸放松法，合理情绪疗法"
+        "heading_kind": "outline_llm",
+        "section_summary": "（1）目的：确立咨询关系；全面了解咨询对象的基本情况和收集具体资料；进行心理评估和诊断；共同确定咨询目标。（2）方法：心理测验，摄入性会谈法。（3）咨询过程如下。 $\\textcircled{1}$ 填写咨询登记表，了解明山的基本情况，并向他阐述相关规定及双方在咨询过程中的责任、权利和义务。$\\textcircled{2}$ 通过倾听、尊重、热情、真诚、共情"
       }
     }
   ]

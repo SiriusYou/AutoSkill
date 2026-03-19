@@ -1,0 +1,36 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "行为主义",
+  "profile_id": "psychology::行为主义",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+  "parent_name": "ABC结构化认知重构工作表干预",
+  "children": [
+    {
+      "skill_id": "879fa120-7492-5040-910d-124383e7d5ce",
+      "name": "合理信念识别与分享",
+      "description": "在CBT咨询中，引导求助者识别、命名并主动陈述其具适应性、符合现实的合理认知信念，作为认知重构的建设性起点。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "level_label": "微技能",
+      "taxonomy_class": "行为主义",
+      "applicable_when": "在CBT咨询中，引导求助者识别、命名并主动陈述其具适应性、符合现实的合理认知信念，作为认知重构的建设性起点。",
+      "selector_terms": [
+        "求助者已初步建立咨询关系",
+        "已完成情绪与行为问题评估",
+        "存在可观察的非适应性自动思维",
+        "CBT",
+        "认知重构",
+        "信念识别",
+        "adaptive_belief",
+        "合理信念识别与分享"
+      ],
+      "relative_path": "心理咨询/Family技能/行为主义/微技能/合理信念识别与分享/SKILL.md"
+    }
+  ]
+}

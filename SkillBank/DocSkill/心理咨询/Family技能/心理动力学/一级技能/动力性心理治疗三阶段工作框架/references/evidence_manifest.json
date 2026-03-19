@@ -1,0 +1,177 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T11:19:15+00:00",
+  "family_name": "心理动力学",
+  "skill_id": "1fc8011f-c7c5-565f-9d54-bac4e0bc9e3a",
+  "skill_name": "动力性心理治疗三阶段工作框架",
+  "support_count": 3,
+  "supports": [
+    {
+      "support_id": "0da5b44b-b4ff-5cfb-bf4e-ed8c69b7192d",
+      "doc_id": "3fbd3871-cf09-514d-9992-d7cd8719fadf",
+      "document_title": "1例大学生的动力性心理治疗案例报告_王煜.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/pdt/1例大学生的动力性心理治疗案例报告_王煜.md",
+      "section": "4咨询方法和过程",
+      "span": {
+        "start": 2522,
+        "end": 2943
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "采用动力性心理治疗方法，在建立治疗联盟的基础上关注移情和防御机制，多种咨询技术综合使用。整个咨询过程分为3个阶段：\n\n第1个阶段：评估阶段。4次咨询，主要目标了解相关背景，进行动力性评估及建立治疗联盟。此阶段咨询师主要运用的技术为共情、支持、倾听。对其背景资料和总体状态进行评估，形成假设。来访者的心理发育阶段位于前俄狄浦斯期。因此，咨询师需要在咨询的过程中提供长期稳定的支持。即稳定的治疗联盟，包括咨询师自身的稳定、设置的稳定及与来访者关系的稳定等可能比咨询的技巧更重要。\n\n在此基础上，与来访者对治疗的设置进行了约定。设置涉及的内容为咨询次数、咨询间隔、每次咨询时间长度、如果在两次咨询过程中需要与咨询师联络采用的方式等。咨询师与来访者经过探讨后达成一致，咨询时间为两个学期，持续1年左右。每周1次，每次咨询时间为50分钟左右。在两次咨询过程需要与咨询师联络时可通过电子邮件方式。如果在咨询过程中想中断咨询，必须与咨询师讨论之后才能决定。",
+      "metadata": {
+        "document_title": "1例大学生的动力性心理治疗案例报告_王煜.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "动力性心理治疗三阶段框架",
+        "asset_type": "macro_protocol",
+        "granularity": "macro",
+        "asset_node_id": "treatment_framework",
+        "asset_path": "family_root/treatment_framework",
+        "asset_level": 1,
+        "visible_role": "parent",
+        "objective": "提供跨阶段、可复用的动力性治疗结构化流程",
+        "task_family": "treatment_framework",
+        "method_family": "Psychodynamic（心理动力学）",
+        "stage": "cross-phase",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "4498a6bc-7480-5034-8f95-a6a5c8f3f3f9",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段"
+        ],
+        "paragraph_start": 0,
+        "paragraph_end": 2,
+        "heading_path": [
+          "4咨询方法和过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "1例大学生的动力性心理治疗案例报告",
+          "1来访者症状描述",
+          "2来访者相关背景",
+          "3来访者症状分析",
+          "利培酮合用西酞普兰治疗强迫症对照观察",
+          "1对象和方法"
+        ],
+        "subsection_headings": [],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "markdown",
+        "section_summary": "采用动力性心理治疗方法，在建立治疗联盟的基础上关注移情和防御机制，多种咨询技术综合使用。整个咨询过程分为3个阶段："
+      }
+    },
+    {
+      "support_id": "696c79f0-3176-5de7-b549-d5f6aeb909a8",
+      "doc_id": "3fbd3871-cf09-514d-9992-d7cd8719fadf",
+      "document_title": "1例大学生的动力性心理治疗案例报告_王煜.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/pdt/1例大学生的动力性心理治疗案例报告_王煜.md",
+      "section": "# 4咨询方法和过程",
+      "span": {
+        "start": 4691,
+        "end": 5006
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "接下来的咨询中，咨询师开始关注咨询室中发生的每一个片断和细节，与其讨论了迟到、与上任咨询师的关系、同学关系、亲戚关系、与父亲的关系等现实问题。对其的攻击性情感进行接纳，鼓励其表达。最后发现当咨询师不再焦虑而保持稳定，来访者就能保持稳定，并在这个过程中逐渐修复创伤。\n\n第3个阶段：结束阶段。2次咨询，主要目标处理分离焦虑，帮助来访者将咨询成果移至现实生活。此阶段咨询师主要运用的技术为共情、解释、建议。经过近1年的咨询，来访者和咨询师都感觉来访者已可以独自去面对生活。于是提出了结束咨询。针对来访者未来在工作中将发生的事情进行了一些讨论。也提出了在咨询结束后，来访者与咨询师仍然可以通过\n\n# 利培酮合用西酞普兰治疗强迫症对照观察",
+      "metadata": {
+        "document_title": "1例大学生的动力性心理治疗案例报告_王煜.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "动力性心理治疗三阶段工作框架",
+        "asset_type": "macro_protocol",
+        "granularity": "macro",
+        "asset_node_id": "treatment_framework",
+        "asset_path": "family_root/treatment_framework",
+        "asset_level": 1,
+        "visible_role": "parent",
+        "objective": "提供可复用的动力性心理治疗跨阶段结构化流程",
+        "task_family": "treatment_framework",
+        "method_family": "Psychodynamic（心理动力学）",
+        "stage": "cross-stage",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "b4b51ebd-8ff7-5950-921e-e14fd2e54efb",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段"
+        ],
+        "paragraph_start": 13,
+        "paragraph_end": 15,
+        "heading_path": [
+          "# 4咨询方法和过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1来访者症状描述",
+          "# 2来访者相关背景",
+          "# 3来访者症状分析",
+          "# 5咨询效果评价",
+          "# 2结果"
+        ],
+        "subsection_headings": [],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "采用动力性心理治疗方法，在建立治疗联盟的基础上关注移情和防御机制，多种咨询技术综合使用。整个咨询过程分为3个阶段："
+      }
+    },
+    {
+      "support_id": "1bb2e228-6feb-5f0a-bdcf-3be5783506ac",
+      "doc_id": "f2277e5d-3e67-50ea-8122-35f47d7cac78",
+      "document_title": "1例大学生社交恐怖症的治疗与分析.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/pdt/1例大学生社交恐怖症的治疗与分析.md",
+      "section": "2 治疗思路与目的",
+      "span": {
+        "start": 972,
+        "end": 1142
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "结合求助者自身心理特点，采用精神分析疗法，让求助者在无拘无束的会谈中领悟到心理异常的症结所在，并逐渐改变其行为模式,从而达到治疗目的。治疗需要两个月左右，一个星期两次，一次 $5 0 ~ \\mathrm { m i n }$ ,共16次。治疗目的是解决求助者在人际交往中的困难,增强自我，控制本我，建立正确的防御机制，能正常地进行学习生活。",
+      "metadata": {
+        "document_title": "1例大学生社交恐怖症的治疗与分析.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "心理动力学框架下的社交恐怖症治疗协议",
+        "asset_type": "macro_protocol",
+        "granularity": "macro",
+        "asset_node_id": "treatment_framework",
+        "asset_path": "family_root/treatment_framework",
+        "asset_level": 1,
+        "visible_role": "parent",
+        "objective": "建立结构化、时限明确的心理动力学长程干预路径",
+        "task_family": "treatment_framework",
+        "method_family": "Psychodynamic（心理动力学）",
+        "stage": "全程治疗规划",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "3059d498-e904-5584-9835-9a4e9f015b52",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "会谈"
+        ],
+        "paragraph_start": 0,
+        "paragraph_end": 0,
+        "heading_path": [
+          "2 治疗思路与目的"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "1 案例介绍",
+          "3部分咨询记录整理方方数据",
+          "4治疗过程",
+          "5致病原因分析",
+          "术前焦虑的研究现状及进展",
+          "6讨论"
+        ],
+        "subsection_headings": [],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "结合求助者自身心理特点，采用精神分析疗法，让求助者在无拘无束的会谈中领悟到心理异常的症结所在，并逐渐改变其行为模式,从而达到治疗目的。治疗需要两个月左右，一个星期两次，一次 $5 0 ~ \\mathrm { m i n }$ ,共16次。治疗目的是解决求助者在人际交往中的困难,增强自我，控制本我，建立正确的防御机制，能正常地进行学习生活。"
+      }
+    }
+  ]
+}

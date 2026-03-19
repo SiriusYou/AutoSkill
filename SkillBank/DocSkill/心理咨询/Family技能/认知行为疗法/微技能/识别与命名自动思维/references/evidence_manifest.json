@@ -1,0 +1,71 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "family_name": "认知行为疗法",
+  "skill_id": "331f79f2-0639-5a14-9bc0-6ca8ba69eebf",
+  "skill_name": "识别与命名自动思维",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "7041e1f1-493d-5bd4-8c63-05fdf68b5f79",
+      "doc_id": "66924bac-13f3-5c17-be8c-e1e5c67c060b",
+      "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "section": "# 5 咨询过程",
+      "span": {
+        "start": 6998,
+        "end": 7096
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "第八次逐字稿摘要如下。\n\n咨询师：那当你去上课听不懂老师所讲的内容的时候或者当你不会老师给你们布置的专业课作业的时候，你在想什么呢？\n\nQ同学：我什么都做不好。我太笨了，我怎么连这些知识都学不会。",
+      "metadata": {
+        "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "识别与命名自动思维",
+        "asset_type": "micro_skill",
+        "granularity": "micro",
+        "asset_node_id": "micro_intervention",
+        "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+        "asset_level": 3,
+        "visible_role": "leaf",
+        "objective": "精准提取并命名自动化负性思维",
+        "task_family": "cognitive_restructuring",
+        "method_family": "CBT",
+        "stage": "assessment_and_awareness",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "cd9080c5-8800-5ada-940e-3016c54eff59",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "作业"
+        ],
+        "paragraph_start": 62,
+        "paragraph_end": 64,
+        "heading_path": [
+          "# 5 咨询过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1例中度抑郁症大学生的心理辅助咨询案例报告",
+          "# 1个案情况",
+          "# 2 咨询信息",
+          "# 3 个案概念化",
+          "# 4 咨询方案",
+          "6 咨询效果评估"
+        ],
+        "subsection_headings": [
+          "# 5.1第一阶段：危机干预阶段（第1次咨询）",
+          "# 5.2第二阶段：收集信息以及建立、稳固关系阶段（第2～3次咨询）",
+          "# 5.3第三阶段：稳定改变阶段（第4～11次咨询）",
+          "5.4第四阶段：巩固与结束阶段（第12～13次咨询）"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "任务：收集资料、了解Q同学的基本问题，初步建立咨访关系，帮助缓解Q同学低落的情绪，评估Q同学自杀风险和心理状态，并建议Q同学转诊就医[3]。"
+      }
+    }
+  ]
+}

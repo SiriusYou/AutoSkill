@@ -1,0 +1,64 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "family_name": "行为主义",
+  "skill_id": "a4db92f3-f810-5e0a-85f7-a24c9718c7b1",
+  "skill_name": "CBT干预听觉过敏的双路径框架",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "6d53a355-a206-57b6-bd33-ac0c7762d784",
+      "doc_id": "55f12f8b-5e3e-5017-a572-7b2668222d11",
+      "document_title": "#心理治疗技术干预听觉过敏的个案研究.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/bt/#心理治疗技术干预听觉过敏的个案研究.md",
+      "section": "# 2讨论",
+      "span": {
+        "start": 4271,
+        "end": 5176
+      },
+      "relation_type": "support",
+      "confidence": 0.92,
+      "quote": "此个案的干预效果支持了心理治疗技术可有效缓解听觉过敏痛苦的相关研究。安德森等［4]从声音引起疼痛感、烦躁感和恐惧感三个方面对患者运用心理治疗技术进行治疗，证明心理治疗技术是一个有效的治疗途径，其中认知行为治疗（CBT）就是通过帮助患者改变其功能障碍的认知、寻求安全行为来减轻焦虑的心理干预。声音刺激引起的疼痛会使患者对声音产生恐惧，反过来也会强化患者对声音的错误认知，所以CBT治疗从与听觉过敏相关的疼痛和恐惧两方面人手，帮助个体搜索他们的负面认知并给予修正，从而打断这一恶性循环。\n\n辛鑫等［7]研究发现，32例听觉过敏患者中有29例（ $9 0 . 6 3 \\%$ ）有噪音接触史，还有文献报道听觉过敏患者听力检查大致正常「8]。本例患者在发病前一周参加音乐会，座位恰好正对扩音器，之后开始左耳疼痛，有噪音暴露史，双侧听力检查均正常，无听力下降，均符合以上研究的临床症状。故此问题特别值得引起注意，脱敏疗法和认知行为治疗技术通常由受过训练的心理咨询师或治疗师实施，但听觉过敏患者一般就诊于耳科，且一部分患者各项听功能检查均正常，医生主要关注的是患者的听力下降或者听觉分辨率的减退而导致的听觉损失，且听觉过敏无特效药治疗，导致病人痛苦万分，特别是不能得到及时有效的指导后，使症状加重，由此也容易导致医患矛盾加深，患者往往认为医生把自己的问题轻视了。在英国，听觉过敏的患者通常在需要时被转介到精神卫生服务机构。在其他国家，多种卫生和社会护理专业人员可能参与以声音耐受障碍为重点的CBT[9]。因此，为避免医患矛盾和帮助患者康复，若患者被诊断为听觉过敏，是否后续可转介到心理卫生服务机构，一方面可由经过专业训练的心理咨询师或治疗师采用心理治疗技术帮助患者脱敏训练，另一方面可以给予患者心理支持。\n\n本研究为听觉过敏患者的康复提供了新思路，但还有多个问题有待解决：（1）干预对象过少。听觉过敏患者的个体差异较大，仅对1例患者进行干预，不利于提取心理治疗技术干预的适用对象，需要将干预方法用于更多听觉过敏患者，反复验证疗效；（2）患者最终回归正常生活，心理干预和机体自我愈复这两方面因素的作用仍待后续研究进一步验证。",
+      "metadata": {
+        "document_title": "#心理治疗技术干预听觉过敏的个案研究.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "CBT干预听觉过敏的双路径框架",
+        "asset_type": "macro_protocol",
+        "granularity": "macro",
+        "asset_node_id": "treatment_framework",
+        "asset_path": "family_root/treatment_framework",
+        "asset_level": 1,
+        "visible_role": "parent",
+        "objective": "中断声音刺激引发的疼痛-恐惧-认知扭曲恶性循环",
+        "task_family": "心理治疗",
+        "method_family": "CBT",
+        "stage": "中期干预",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "ff522212-7407-517d-9c6c-9f1b602f2a8f",
+        "window_strategy": "strict",
+        "anchor_hits": [],
+        "paragraph_start": 0,
+        "paragraph_end": 2,
+        "heading_path": [
+          "# 2讨论"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 心理治疗技术干预听觉过敏的个案研究",
+          "# 1 临床资料",
+          "# 表1听觉过敏疼痛程度等级",
+          "# 表2认知行为治疗的ABC 理论",
+          "# 参考文献",
+          "# A Case Study of Psychological Technique Intervention on Hyperacusis"
+        ],
+        "subsection_headings": [],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "此个案的干预效果支持了心理治疗技术可有效缓解听觉过敏痛苦的相关研究。安德森等［4]从声音引起疼痛感、烦躁感和恐惧感三个方面对患者运用心理治疗技术进行治疗，证明心理治疗技术是一个有效的治疗途径，其中认知行为治疗（CBT）就是通过帮助患者改变其功能障碍的认知、寻求安全行为来减轻焦虑的心理干预。声音刺激引起的疼痛会使患者对声音产生恐惧，反过来也会强化患者对声音的错"
+      }
+    }
+  ]
+}

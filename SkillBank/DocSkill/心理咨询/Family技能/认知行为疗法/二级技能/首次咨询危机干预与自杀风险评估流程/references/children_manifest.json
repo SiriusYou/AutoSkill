@@ -1,0 +1,58 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "认知行为疗法",
+  "profile_id": "psychology::认知行为疗法",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "361eedb9-c388-540f-8ec5-789389cfe158",
+  "parent_name": "首次咨询危机干预与自杀风险评估流程",
+  "children": [
+    {
+      "skill_id": "92258943-4f58-52f2-bdcb-5bf567e67bfb",
+      "name": "抑郁初访转诊沟通脚本",
+      "description": "将精神科转诊建议转化为来访者可接受、去污名化、具操作性的临床沟通策略。",
+      "child_type": "micro_intervention",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "361eedb9-c388-540f-8ec5-789389cfe158",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "将精神科转诊建议转化为来访者可接受、去污名化、具操作性的临床沟通策略。",
+      "selector_terms": [
+        "确认中度及以上抑郁症状",
+        "SCL-90抑郁分≥2.5",
+        "存在明显生理性症状（失眠/厌食/精力枯竭）",
+        "CBT",
+        "医教协同",
+        "去污名化",
+        "转诊沟通",
+        "抑郁初访转诊沟通脚本"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/抑郁初访转诊沟通脚本/SKILL.md"
+    },
+    {
+      "skill_id": "9de564ce-5aa8-5109-a5d7-1ebd0c997868",
+      "name": "自杀意念结构化评估话术",
+      "description": "一套简明、非威胁、临床有效的自杀风险递进式提问序列，用于精准识别意念强度、计划性与即时风险。",
+      "child_type": "micro_intervention",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "361eedb9-c388-540f-8ec5-789389cfe158",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "一套简明、非威胁、临床有效的自杀风险递进式提问序列，用于精准识别意念强度、计划性与即时风险。",
+      "selector_terms": [
+        "来访者提及情绪低落、无价值感、疲惫感",
+        "观察到言语/行为退缩迹象",
+        "CBT",
+        "风险评估",
+        "结构化提问",
+        "自杀意念结构化评估话术"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/自杀意念结构化评估话术/SKILL.md"
+    }
+  ]
+}

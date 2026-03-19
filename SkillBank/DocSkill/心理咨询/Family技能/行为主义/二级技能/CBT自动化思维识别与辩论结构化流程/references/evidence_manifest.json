@@ -1,0 +1,129 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "family_name": "行为主义",
+  "skill_id": "56f4f581-7536-5860-acc8-2f266a5e57dd",
+  "skill_name": "CBT自动化思维识别与辩论结构化流程",
+  "support_count": 2,
+  "supports": [
+    {
+      "support_id": "8b5d33b5-2442-5ea7-ba1e-157acab49e97",
+      "doc_id": "66924bac-13f3-5c17-be8c-e1e5c67c060b",
+      "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "section": "# 5 咨询过程",
+      "span": {
+        "start": 5599,
+        "end": 6323
+      },
+      "relation_type": "support",
+      "confidence": 0.92,
+      "quote": "Q同学：因为我之前想象的是老师，然后假期的话就会有时间休闲下来去做自己喜欢的事情。比如说去旅游澳洲去跟朋友一块玩，或者是自已读书在家待着也行，反正就是没有人管的无拘无束的生活，想干什么干什么的生活。\n\n# 5.3第三阶段：稳定改变阶段（第4～11次咨询）\n任务：帮助Q同学识别自己的认知和情绪；通过对Q同学成长过程中具体事件帮助她识别自己存在的一些自动化思维，并与这些信念进行辩论，学会矫正自动化思维，重新建立新的适应性的信念，从而促进Q同学行为的改变。\n\n方法：共情、倾听、尊重、开放式询问、面质、情感反应技术、应对询问技术、自动化思维识别技术。\n\n过程：每次咨询刚开始会对Q同学进行心境检查，再进行本次的咨询日程设置，讨论家庭作业完成情况，讨论后决定本次的咨询问题。主要包括：进一步收集资料，巩固与Q同学的咨询关系；围绕Q同学的个人陈述以及咨询师在咨询过程中的信息掌握，根据抑郁障碍的认知行为模型，发现Q同学的自动化思维，挖掘她内心更深处的核心信念，咨询师形成对Q同学的个案概念化；向Q同学讲授情绪“ABC”理论，帮助Q同学识别自己的情绪和认知，区分认知信念和既定事实；一起发现和识别Q同学的自动化思维，并学习矫正技术；布置家庭作业，如请Q同学每天记录三件发生的让自己开心或感到幸福的事件，并在下一次咨询时进行检查。在下一次咨询时，咨询师问及家庭作业完成情况。Q同学表示开始尝试每天记录3件开始的小事，前两天写3件小事对于自己来说比较困难。但是后面强迫自己写还是可以写出来的。Q同学跟咨询师分享自己有去赏花、跟室友去聚餐、与父母打电话等让自己感觉到幸福的事情。随后咨询师与Q同学针对每件事情背后的感受和意义等展开讨论。\n\n第五次逐字稿摘要如下。",
+      "metadata": {
+        "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "CBT自动化思维识别与辩论结构化流程",
+        "asset_type": "session_skill",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "在单次咨询内完成一个可迁移的认知重评微型训练，强化来访者对思维-情绪-行为联结的觉察与调节能力",
+        "task_family": "cognitive_behavioral_therapy",
+        "method_family": "CBT（认知行为疗法）",
+        "stage": "stable_change",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "0f0bd193-8228-5e6d-942f-9bcb78df7427",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段",
+          "家庭作业",
+          "作业"
+        ],
+        "paragraph_start": 38,
+        "paragraph_end": 42,
+        "heading_path": [
+          "# 5 咨询过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1例中度抑郁症大学生的心理辅助咨询案例报告",
+          "# 1个案情况",
+          "# 2 咨询信息",
+          "# 3 个案概念化",
+          "# 4 咨询方案",
+          "6 咨询效果评估"
+        ],
+        "subsection_headings": [
+          "# 5.1第一阶段：危机干预阶段（第1次咨询）",
+          "# 5.2第二阶段：收集信息以及建立、稳固关系阶段（第2～3次咨询）",
+          "# 5.3第三阶段：稳定改变阶段（第4～11次咨询）",
+          "5.4第四阶段：巩固与结束阶段（第12～13次咨询）"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "任务：收集资料、了解Q同学的基本问题，初步建立咨访关系，帮助缓解Q同学低落的情绪，评估Q同学自杀风险和心理状态，并建议Q同学转诊就医[3]。"
+      }
+    },
+    {
+      "support_id": "f593d49d-a6c4-5941-beb0-e6ae22f05edc",
+      "doc_id": "55f12f8b-5e3e-5017-a572-7b2668222d11",
+      "document_title": "#心理治疗技术干预听觉过敏的个案研究.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/bt/#心理治疗技术干预听觉过敏的个案研究.md",
+      "section": "# 表1听觉过敏疼痛程度等级",
+      "span": {
+        "start": 3210,
+        "end": 3614
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "（2）认知行为疗法（CBT）\n声音刺激引起的疼痛会使患者对声音产生恐惧，反过来也会强化患者对声音的错误认知，所以往往听觉过敏的患者，随着病情时间的拖延，在后期会症状越来越严重，对声音的接受度越来越差，甚至到不能出门，丧失社会功能的程度。本案例中的患者，在发病后1个月左右就达到此程度。\n\n认知行为治疗认为,适应不良的行为与情绪,都源于适应不良的认知。治疗的目标不仅仅是针对行为、情绪这些外在表现，而是要分析病人的思维活动，找出错误的认知加以纠正。美国临床心理学家埃利斯（Ells）就此提出理性情绪疗法提出ABC理论，A指事件，B指认知，C指这件事发生后的情绪和行为。埃利斯用这个框架来说明，人们有正确的、合理的认知，他的情绪和行为就会合理，如果他的认知是不合理的，则他的情绪和行为就可能有负性的表现。在本案例中，我们需要帮助患者建立对待声音、对待疼痛的正确认知，帮助她缓解由于声音导致疼痛而产生的焦虑和恐慌。",
+      "metadata": {
+        "document_title": "#心理治疗技术干预听觉过敏的个案研究.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "CBT ABC认知重构干预",
+        "asset_type": "session_skill",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "在单次咨询中完成对核心非理性认知的识别、检验与初步替代，降低声音相关焦虑强度至少20%（主观单位SUDS自评）",
+        "task_family": "cognitive_behavioral_therapy",
+        "method_family": "CBT",
+        "stage": "middle",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "971342b3-7eb7-56c5-9219-29867d92827c",
+        "window_strategy": "strict",
+        "anchor_hits": [],
+        "paragraph_start": 2,
+        "paragraph_end": 3,
+        "heading_path": [
+          "# 表1听觉过敏疼痛程度等级"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 心理治疗技术干预听觉过敏的个案研究",
+          "# 1 临床资料",
+          "# 表2认知行为治疗的ABC 理论",
+          "# 2讨论",
+          "# 参考文献",
+          "# A Case Study of Psychological Technique Intervention on Hyperacusis"
+        ],
+        "subsection_headings": [
+          "（2）认知行为疗法（CBT）"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "Table 1 Pain rating scale of hyperacusis"
+      }
+    }
+  ]
+}

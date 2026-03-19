@@ -1,0 +1,75 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "family_name": "行为主义",
+  "skill_id": "76752e4a-acf1-5344-ab65-774b6aaccec5",
+  "skill_name": "布置认知行为家庭作业",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "a8f9c6f1-b5c2-5b7f-8e05-db4a731f244d",
+      "doc_id": "3ee0e8b5-67fb-503b-82ea-6336dbedae1a",
+      "document_title": "00206135895.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/bt/00206135895.md",
+      "section": "6.咨询过程：咨询过程分为三个阶段",
+      "span": {
+        "start": 6216,
+        "end": 6357
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "求：(沉默)可能不会吧！或许是我想多了\n\n(3）布置家庭作业\n$\\textcircled{1}$ 还有哪些不合理的信念，进行自己与自己辩论；$\\textcircled{2}$ 放松训练\n\n(4）结束与巩固阶段\n第八次咨询\n\n(a)复习咨询过程中建立起来的合理信念，同时注意调整关注点",
+      "metadata": {
+        "document_title": "00206135895.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "布置认知行为家庭作业",
+        "asset_type": "session_skill",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "强化新建立的合理信念，泛化咨询效果至日常生活情境",
+        "task_family": "cognitive_behavioral_therapy",
+        "method_family": "CBT",
+        "stage": "结束与巩固阶段",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "6b80b63a-c449-5107-8095-56c9e60a0c55",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "家庭作业",
+          "作业",
+          "阶段"
+        ],
+        "paragraph_start": 35,
+        "paragraph_end": 38,
+        "heading_path": [
+          "6.咨询过程：咨询过程分为三个阶段"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "A Case of Psychological Counseling for College Students' Stage Anxiety",
+          "Abstract",
+          "Keywords",
+          "一例舞蹈系大学生舞台焦虑的心理咨询案例",
+          "摘要",
+          "关键词"
+        ],
+        "subsection_headings": [
+          "（一）诊断阶段",
+          "(二）咨询阶段",
+          "(7)共同确认不合理信念：",
+          "(2）与不合理信念辩论，咨询师采用直接提问的方式：",
+          "(3）布置家庭作业",
+          "(4）结束与巩固阶段"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "第一次咨询，建立良好的咨询关系，通过摄入性会谈、观察了解、心理测验等收集求助者相关信息，明确求助者的问题、产生问题的原因、问题的严重程度，最终做出明确的心理诊断。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "认知行为疗法",
+  "profile_id": "psychology::认知行为疗法",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+  "parent_name": "RET自助表引导式认知辩论",
+  "children": [
+    {
+      "skill_id": "d43fcefe-9fa2-50e5-8d76-2d5cc9fb5780",
+      "name": "RET自助表填写与非理性信念识别",
+      "description": "指导来访者结构化填写理性情绪疗法（RET）自助表，系统识别自动思维中隐含的非理性信念（如绝对化要求、过度概括、灾难化），为后续认知反驳提供可操作依据。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "指导来访者结构化填写理性情绪疗法（RET）自助表，系统识别自动思维中隐含的非理性信念（如绝对化要求、过度概括、灾难化），为后续认知反驳提供可操作依据。",
+      "selector_terms": [
+        "咨询中期，来访者已建立基本信任并完成初步评估",
+        "来访者存在明显绝对化要求、过度概括或灾难化思维倾向",
+        "CBT",
+        "RET",
+        "家庭作业",
+        "认知重构",
+        "RET自助表填写与非理性信念识别"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/RET自助表填写与非理性信念识别/SKILL.md"
+    },
+    {
+      "skill_id": "388fe4cb-8b67-5fa6-874f-06477dfbcd73",
+      "name": "RET自助表辩论与合理信念替换",
+      "description": "引导求助者使用理性情绪疗法（RET）自助表识别不合理信念，并通过苏格拉底式提问进行自我辩论，最终用合理信念替代原有非适应性认知。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "引导求助者使用理性情绪疗法（RET）自助表识别不合理信念，并通过苏格拉底式提问进行自我辩论，最终用合理信念替代原有非适应性认知。",
+      "selector_terms": [
+        "求助者完成RET自助表作业",
+        "出现情绪波动后主动提及认知困扰",
+        "咨询进入巩固阶段且已有基础认知重构经验",
+        "RET",
+        "认知重构",
+        "家庭作业反馈",
+        "CBT",
+        "RET自助表辩论与合理信念替换"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/RET自助表辩论与合理信念替换/SKILL.md"
+    },
+    {
+      "skill_id": "9f5e8bdb-1297-5b5d-9d66-56c377c69dbb",
+      "name": "RET非理性信念认知反驳技术",
+      "description": "在来访者完成RET自助表基础上，引导其运用苏格拉底式提问与现实检验，对已识别的非理性信念进行逻辑解构与替代性理性信念建构。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "在来访者完成RET自助表基础上，引导其运用苏格拉底式提问与现实检验，对已识别的非理性信念进行逻辑解构与替代性理性信念建构。",
+      "selector_terms": [
+        "来访者已提交RET自助表并标注至少1个非理性信念",
+        "来访者表现出对自身思维模式的好奇或初步领悟",
+        "CBT",
+        "RET",
+        "认知反驳",
+        "苏格拉底式提问",
+        "RET非理性信念认知反驳技术"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/RET非理性信念认知反驳技术/SKILL.md"
+    },
+    {
+      "skill_id": "bcc1d826-9a5c-5e0b-8dc4-42a248ff2759",
+      "name": "苏格拉底式辩论引导不合理信念识别",
+      "description": "在CBT框架下，针对来访者绝对化、过度概括、灾难化等不合理信念，运用结构化提问（苏格拉底辩论术）促使其自我觉察与逻辑检验。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "在CBT框架下，针对来访者绝对化、过度概括、灾难化等不合理信念，运用结构化提问（苏格拉底辩论术）促使其自我觉察与逻辑检验。",
+      "selector_terms": [
+        "来访者表达‘必须’‘应该’‘永远不’等绝对化语言",
+        "出现‘全或无’‘以偏概全’‘情绪推理’等认知扭曲表现",
+        "CBT",
+        "认知重构",
+        "苏格拉底辩论",
+        "不合理信念",
+        "苏格拉底式辩论引导不合理信念识别"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/苏格拉底式辩论引导不合理信念识别/SKILL.md"
+    }
+  ]
+}

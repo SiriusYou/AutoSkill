@@ -1,16 +1,28 @@
 {
   "schema": "autoskill.document.domain_manifest.v1",
-  "generated_at": "2026-03-16T06:14:36+00:00",
+  "generated_at": "2026-03-19T11:19:15+00:00",
   "domain_root_name": "心理咨询",
-  "profile_id": "psychology::认知行为疗法",
+  "profile_id": "psychology::心理动力学",
   "taxonomy_axis": "疗法",
   "family_bucket_label": "Family技能",
   "families": [
     {
+      "family_name": "心理动力学",
+      "relative_root": "心理咨询/Family技能/心理动力学",
+      "parent_relative_path": "心理咨询/Family技能/心理动力学/总技能/SKILL.md",
+      "child_count": 2
+    },
+    {
+      "family_name": "行为主义",
+      "relative_root": "心理咨询/Family技能/行为主义",
+      "parent_relative_path": "心理咨询/Family技能/行为主义/总技能/SKILL.md",
+      "child_count": 7
+    },
+    {
       "family_name": "认知行为疗法",
       "relative_root": "心理咨询/Family技能/认知行为疗法",
       "parent_relative_path": "心理咨询/Family技能/认知行为疗法/总技能/SKILL.md",
-      "child_count": 8
+      "child_count": 2
     }
   ]
 }

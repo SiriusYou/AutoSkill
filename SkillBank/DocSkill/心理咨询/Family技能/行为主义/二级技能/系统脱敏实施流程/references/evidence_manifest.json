@@ -1,0 +1,71 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "family_name": "行为主义",
+  "skill_id": "5b4feb3c-37d5-5f43-b4da-aa1c4978551f",
+  "skill_name": "系统脱敏实施流程",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "ab94ee94-8fdc-5667-becf-1621280aee5e",
+      "doc_id": "3ee0e8b5-67fb-503b-82ea-6336dbedae1a",
+      "document_title": "00206135895.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/bt/00206135895.md",
+      "section": "6.咨询过程：咨询过程分为三个阶段",
+      "span": {
+        "start": 5805,
+        "end": 5848
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "第五次咨询\n\n根据之前建立的焦虑等级以及习得的放松技术实施系统脱敏。\n\n第六到七次咨询",
+      "metadata": {
+        "document_title": "00206135895.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "系统脱敏实施流程",
+        "asset_type": "session_skill",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "降低特定情境下的条件性焦虑反应",
+        "task_family": "行为矫正",
+        "method_family": "Behaviorism（行为主义）",
+        "stage": "咨询阶段",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "f447de1e-d195-53a9-b55c-efebc4b54875",
+        "window_strategy": "strict",
+        "anchor_hits": [],
+        "paragraph_start": 14,
+        "paragraph_end": 16,
+        "heading_path": [
+          "6.咨询过程：咨询过程分为三个阶段"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "A Case of Psychological Counseling for College Students' Stage Anxiety",
+          "Abstract",
+          "Keywords",
+          "一例舞蹈系大学生舞台焦虑的心理咨询案例",
+          "摘要",
+          "关键词"
+        ],
+        "subsection_headings": [
+          "（一）诊断阶段",
+          "(二）咨询阶段",
+          "(7)共同确认不合理信念：",
+          "(2）与不合理信念辩论，咨询师采用直接提问的方式：",
+          "(3）布置家庭作业",
+          "(4）结束与巩固阶段"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "第一次咨询，建立良好的咨询关系，通过摄入性会谈、观察了解、心理测验等收集求助者相关信息，明确求助者的问题、产生问题的原因、问题的严重程度，最终做出明确的心理诊断。"
+      }
+    }
+  ]
+}

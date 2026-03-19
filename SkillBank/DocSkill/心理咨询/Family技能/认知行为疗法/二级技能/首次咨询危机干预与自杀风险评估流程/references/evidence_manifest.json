@@ -1,0 +1,73 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "family_name": "认知行为疗法",
+  "skill_id": "361eedb9-c388-540f-8ec5-789389cfe158",
+  "skill_name": "首次咨询危机干预与自杀风险评估流程",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "b4b16d34-f996-5e91-a688-e994076b9ecf",
+      "doc_id": "66924bac-13f3-5c17-be8c-e1e5c67c060b",
+      "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "section": "# 5 咨询过程",
+      "span": {
+        "start": 3804,
+        "end": 4085
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "# 5.1第一阶段：危机干预阶段（第1次咨询）\n任务：收集资料、了解Q同学的基本问题，初步建立咨访关系，帮助缓解Q同学低落的情绪，评估Q同学自杀风险和心理状态，并建议Q同学转诊就医[3]。\n\n方法：开放式询问、共情、倾听、支持、共情、情感反应技术等，正面讨论自杀确定风险等级，在Q同学知情同意后对其进行心理测验（SCL-90）。\n\n过程：与Q同学进行心理咨询的基本设置、保密与保密例外的介绍，Q同学自述最近一段时间频繁有自杀想法，最近一次是在来第一次咨询前的上午。失眠严重，经常半夜才能睡着，没有食欲，并且对生活和学习丧失兴趣，不想与人交往，喜欢自己一个人待着。",
+      "metadata": {
+        "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "首次咨询危机干预与自杀风险评估流程",
+        "asset_type": "safety_rule",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "完成危机筛查、建立初步咨访关系、降低急性风险、启动医疗协同",
+        "task_family": "session_framework",
+        "method_family": "CBT",
+        "stage": "初始阶段",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "dcc6ad81-ee60-53ac-bc34-80737b658b07",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段",
+          "第1次咨询",
+          "危机干预"
+        ],
+        "paragraph_start": 0,
+        "paragraph_end": 2,
+        "heading_path": [
+          "# 5 咨询过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1例中度抑郁症大学生的心理辅助咨询案例报告",
+          "# 1个案情况",
+          "# 2 咨询信息",
+          "# 3 个案概念化",
+          "# 4 咨询方案",
+          "6 咨询效果评估"
+        ],
+        "subsection_headings": [
+          "# 5.1第一阶段：危机干预阶段（第1次咨询）",
+          "# 5.2第二阶段：收集信息以及建立、稳固关系阶段（第2～3次咨询）",
+          "# 5.3第三阶段：稳定改变阶段（第4～11次咨询）",
+          "5.4第四阶段：巩固与结束阶段（第12～13次咨询）"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "任务：收集资料、了解Q同学的基本问题，初步建立咨访关系，帮助缓解Q同学低落的情绪，评估Q同学自杀风险和心理状态，并建议Q同学转诊就医[3]。"
+      }
+    }
+  ]
+}

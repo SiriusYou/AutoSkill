@@ -1,0 +1,64 @@
+{
+  "schema": "autoskill.document.children_manifest.v2",
+  "generated_at": "2026-03-19T11:19:15+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "心理动力学",
+  "family_id": "psychodynamic",
+  "profile_id": "psychology::心理动力学",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "5d1cd945-894b-561f-86b8-92ebe5bff298",
+  "children": [
+    {
+      "skill_id": "1fc8011f-c7c5-565f-9d54-bac4e0bc9e3a",
+      "name": "动力性心理治疗三阶段工作框架",
+      "description": "基于心理动力学取向的结构化跨阶段咨询流程：初始联盟建立与移情/防御探索 → 中期深入处理攻击性情感与关系模式 → 结束阶段聚焦分离焦虑与现实迁移。强调治疗师情绪稳定性作为关键修复性变量。本 framework supports population- and disorder-specific instantiations (e.g., social phobia in university students), where phase timing, outcome indicators, and cautions are calibrated to clinical presentation while preserving core structural integrity.",
+      "child_type": "treatment_framework",
+      "asset_node_id": "treatment_framework",
+      "asset_path": "family_root/treatment_framework",
+      "asset_level": 1,
+      "parent_skill_id": "",
+      "level_label": "一级技能",
+      "taxonomy_class": "心理动力学",
+      "applicable_when": "基于心理动力学取向的结构化跨阶段咨询流程：初始联盟建立与移情/防御探索 → 中期深入处理攻击性情感与关系模式 → 结束阶段聚焦分离焦虑与现实迁移。强调治疗师情绪稳定性作为关键修复性变量。本 framework supports population- and disorder-specific instantiations (e.g., social phobia in university students), where phase timing, outcome indicators, and cautions are calibrated to clinical presentation while preserving core structural integrity.",
+      "selector_terms": [
+        "首次咨询启动",
+        "来访者出现迟到、回避、理想化/贬低等移情迹象",
+        "咨询中期情绪波动加剧或关系议题密集浮现",
+        "确诊社交恐怖症且符合心理动力学适应证（如内省力尚可、主诉人际困扰为主、无急性危机）",
+        "来访者愿意接受长程探索性谈话，对潜意识动机与早年经历持开放态度",
+        "心理动力学",
+        "阶段化",
+        "移情",
+        "防御机制",
+        "社交恐怖症",
+        "结构化疗程",
+        "动力性心理治疗三阶段工作框架"
+      ],
+      "relative_path": "心理咨询/Family技能/心理动力学/一级技能/动力性心理治疗三阶段工作框架/SKILL.md"
+    },
+    {
+      "skill_id": "984e36c3-78ac-524a-8a5a-cf00f6fca106",
+      "name": "心理动力学四阶段咨询宏观框架",
+      "description": "一个结构化的心理动力学取向咨询宏观框架，划分为评估与概念化、关系同盟建立、模式觉察与功能示范、内化与演练四个递进阶段。适用于中长程心理动力学个案的全程规划。",
+      "child_type": "心理咨询流程设计",
+      "asset_node_id": "treatment_framework",
+      "asset_path": "family_root/treatment_framework",
+      "asset_level": 1,
+      "parent_skill_id": "",
+      "level_label": "一级技能",
+      "taxonomy_class": "心理动力学",
+      "applicable_when": "一个结构化的心理动力学取向咨询宏观框架，划分为评估与概念化、关系同盟建立、模式觉察与功能示范、内化与演练四个递进阶段。适用于中长程心理动力学个案的全程规划。",
+      "selector_terms": [
+        "启动中长程心理动力学咨询",
+        "完成初始评估并确认咨访匹配",
+        "来访者情绪表达趋于稳定且同盟形成",
+        "心理动力学",
+        "阶段模型",
+        "中长程咨询",
+        "无意识意识化",
+        "心理动力学四阶段咨询宏观框架"
+      ],
+      "relative_path": "心理咨询/Family技能/心理动力学/一级技能/心理动力学四阶段咨询宏观框架/SKILL.md"
+    }
+  ]
+}

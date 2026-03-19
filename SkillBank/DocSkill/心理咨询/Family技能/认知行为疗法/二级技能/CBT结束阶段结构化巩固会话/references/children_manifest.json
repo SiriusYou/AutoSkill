@@ -1,0 +1,36 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "认知行为疗法",
+  "profile_id": "psychology::认知行为疗法",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "2c78496d-02d7-51a9-9b75-f2636707b333",
+  "parent_name": "CBT结束阶段结构化巩固会话",
+  "children": [
+    {
+      "skill_id": "def75c16-ca9f-5f6f-8ff0-8b67e0b3a631",
+      "name": "CBT咨询末期疗效自评引导",
+      "description": "在CBT咨询巩固和结束阶段，通过结构化开放式提问，引导来访者自主回顾情绪识别、表达与调节能力的改变，强化自我效能感与治疗获益感，促进疗效内化与维持。",
+      "child_type": "micro_intervention",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "2c78496d-02d7-51a9-9b75-f2636707b333",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "在CBT咨询巩固和结束阶段，通过结构化开放式提问，引导来访者自主回顾情绪识别、表达与调节能力的改变，强化自我效能感与治疗获益感，促进疗效内化与维持。",
+      "selector_terms": [
+        "咨询进入巩固和结束阶段",
+        "来访者已完成核心技能训练（如情绪识别、认知重评、行为实验）",
+        "无急性危机或未解决的安全风险",
+        "CBT",
+        "结束阶段",
+        "疗效评估",
+        "自我报告",
+        "CBT咨询末期疗效自评引导"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/CBT咨询末期疗效自评引导/SKILL.md"
+    }
+  ]
+}

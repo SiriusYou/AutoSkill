@@ -1,0 +1,71 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "family_name": "认知行为疗法",
+  "skill_id": "37a3e288-3b0f-547b-ba8b-25425a395b6b",
+  "skill_name": "CBT自动化思维识别引导微技能",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "ab5d7a43-6089-5942-b78e-12344246a2c7",
+      "doc_id": "66924bac-13f3-5c17-be8c-e1e5c67c060b",
+      "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "section": "7案例评价及反思",
+      "span": {
+        "start": 8961,
+        "end": 9531
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "此外，咨询师在咨询过程中也存在一些小问题，比如当咨询双方在咨询时出现沉默的情况时，咨询师会比较着急想打破沉默，避免尴尬。在以后的咨询中，咨询师应该自我觉察，自己内心发生了什么以及为什么会有这种想法产生，并且及时将自己的思维拉回到当下。\n\n7.3对咨询方法的评价与反思\n在本案例中，咨询师采用的是认知行为疗法与Q同学开展会谈工作。在咨询的稳定改变阶段，咨询师开始向来访者介绍自动化思维、认知模式等，并在咨询会谈中与Q同学一同将理论知识与Q同学的结合实际情况，进行分析。Q同学无法区别自己的情绪和认知以及自己的自动化思维和既定事实，这是对于来访者来说比较困难的地方，需要咨询师有耐心一点一点，一步步地帮助和引导Q同学去识别、确认自己面对的情境事件、情绪以及认识信念，才使得后面的咨询能够更加有效地进展。在以后的咨询中，咨询师应该以更加简单易懂，更容易让来访者接受的方式向其介绍和灵活运用认知行为疗法。\n\n通过与Q同学连续13次的工作，咨询师再次感受到了心理咨询的强大力量。“万物皆有裂痕，那是光照进来的地西藏职业技术学院的机电学院不同年级不同专业的28名高职学生进行公共选修课的开展，以每周2学时进行了15周总共30学时的课程实施。在课程实施之前进行了大学生恋爱观和行为问卷前测，在课程结束后又进行了后测。\n\n# 3.6课程实施效果（测试结果）",
+      "metadata": {
+        "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "CBT自动化思维识别引导微技能",
+        "asset_type": "micro_skill",
+        "granularity": "micro",
+        "asset_node_id": "micro_intervention",
+        "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+        "asset_level": 3,
+        "visible_role": "leaf",
+        "objective": "提升来访者对自动化思维的觉察与区分能力",
+        "task_family": "认知行为疗法",
+        "method_family": "CBT",
+        "stage": "stable_change",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "77587b70-36ca-5d28-9f40-215b959b23fa",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段",
+          "会谈"
+        ],
+        "paragraph_start": 3,
+        "paragraph_end": 6,
+        "heading_path": [
+          "7案例评价及反思"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1例中度抑郁症大学生的心理辅助咨询案例报告",
+          "# 1个案情况",
+          "# 2 咨询信息",
+          "# 3 个案概念化",
+          "# 4 咨询方案",
+          "# 5 咨询过程"
+        ],
+        "subsection_headings": [
+          "7.1对咨询目标成败的思考与分析",
+          "7.2对咨询过程的评价与反思",
+          "7.3对咨询方法的评价与反思"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "通过13次咨询，基本实现咨询的近、远期目标，Q同学的抑郁情绪基本缓解，与家人和同学的关系缓和，对于学习的态度和行为变得更加积极。"
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@ version: "0.1.0"
 tags:
   - "心理咨询"
   - "kind:domain_root"
-  - "profile:psychology::认知行为疗法"
+  - "profile:psychology::心理动力学"
   - "axis:疗法"
 triggers:
   - "心理咨询"
@@ -20,7 +20,9 @@ triggers:
 ## Prompt
 
 ## Family目录
-- [认知行为疗法](心理咨询/Family技能/认知行为疗法/总技能/SKILL.md) ｜ 已同步技能数：8
+- [心理动力学](心理咨询/Family技能/心理动力学/总技能/SKILL.md) ｜ 已同步技能数：2
+- [行为主义](心理咨询/Family技能/行为主义/总技能/SKILL.md) ｜ 已同步技能数：7
+- [认知行为疗法](心理咨询/Family技能/认知行为疗法/总技能/SKILL.md) ｜ 已同步技能数：2
 
 ## 选用规则（各 Family）
 - 优先根据文档中明确的方法学术语、章节主题和任务目标进入对应 family。

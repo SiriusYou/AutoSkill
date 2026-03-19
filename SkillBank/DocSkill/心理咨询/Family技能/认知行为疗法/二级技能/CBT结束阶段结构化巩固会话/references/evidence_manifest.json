@@ -1,0 +1,71 @@
+{
+  "schema": "autoskill.document.evidence_manifest.v1",
+  "generated_at": "2026-03-19T09:33:32+00:00",
+  "family_name": "认知行为疗法",
+  "skill_id": "2c78496d-02d7-51a9-9b75-f2636707b333",
+  "skill_name": "CBT结束阶段结构化巩固会话",
+  "support_count": 1,
+  "supports": [
+    {
+      "support_id": "353d7349-e012-5de4-9774-f0b5337fd5d2",
+      "doc_id": "66924bac-13f3-5c17-be8c-e1e5c67c060b",
+      "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/cbt/1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+      "section": "# 5 咨询过程",
+      "span": {
+        "start": 7538,
+        "end": 7795
+      },
+      "relation_type": "support",
+      "confidence": 0.95,
+      "quote": "咨询师：好的。我知道了，就是当你上课听不懂专业课老师所讲的内容时，你会觉得自己很无能，什么都做不好。Q同学：是的。\n\n5.4第四阶段：巩固与结束阶段（第12～13次咨询）\n任务：巩固效果，总结回顾，结束咨询。  \n方法：鼓励、支持、回顾概括等方法。\n\n过程：通过前些阶段的咨询，Q同学的情绪状态有了很大的改变，能够比较顺心地投入到正常的学习和生活中。在这个阶段，咨询主要是巩固咨询效果，回顾、总结之前的咨询过程和经历，启发Q同学，并鼓励Q同学可以尝试将总结的经验运用于以后的学习和生活中，一起展望了未来的大学生活。",
+      "metadata": {
+        "document_title": "1例中度抑郁症大学生的心理辅助咨询案例报告_李甜田.md",
+        "domain": "psychology",
+        "extraction_unit": "window",
+        "skill_name": "巩固与结束阶段咨询流程",
+        "asset_type": "session_skill",
+        "granularity": "session",
+        "asset_node_id": "session_framework",
+        "asset_path": "family_root/treatment_framework/session_framework",
+        "asset_level": 2,
+        "visible_role": "parent",
+        "objective": "巩固已习得的认知行为技能，促进泛化应用，支持自主维持，平稳结束咨访关系",
+        "task_family": "session_framework",
+        "method_family": "CBT",
+        "stage": "结束阶段",
+        "domain_type": "psychology",
+        "taxonomy_id": "psychology",
+        "window_id": "9495d323-95e3-5449-ba35-d71e8c06ecb2",
+        "window_strategy": "strict",
+        "anchor_hits": [
+          "阶段"
+        ],
+        "paragraph_start": 79,
+        "paragraph_end": 81,
+        "heading_path": [
+          "# 5 咨询过程"
+        ],
+        "parent_heading": "",
+        "sibling_headings": [
+          "# 1例中度抑郁症大学生的心理辅助咨询案例报告",
+          "# 1个案情况",
+          "# 2 咨询信息",
+          "# 3 个案概念化",
+          "# 4 咨询方案",
+          "6 咨询效果评估"
+        ],
+        "subsection_headings": [
+          "# 5.1第一阶段：危机干预阶段（第1次咨询）",
+          "# 5.2第二阶段：收集信息以及建立、稳固关系阶段（第2～3次咨询）",
+          "# 5.3第三阶段：稳定改变阶段（第4～11次咨询）",
+          "5.4第四阶段：巩固与结束阶段（第12～13次咨询）"
+        ],
+        "context_snippets": [],
+        "heading_number": "",
+        "heading_kind": "outline_llm",
+        "section_summary": "任务：收集资料、了解Q同学的基本问题，初步建立咨访关系，帮助缓解Q同学低落的情绪，评估Q同学自杀风险和心理状态，并建议Q同学转诊就医[3]。"
+      }
+    }
+  ]
+}

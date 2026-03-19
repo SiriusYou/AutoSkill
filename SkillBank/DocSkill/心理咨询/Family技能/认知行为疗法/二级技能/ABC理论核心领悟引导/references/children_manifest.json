@@ -1,35 +1,58 @@
 {
   "schema": "autoskill.document.parent_children_manifest.v1",
-  "generated_at": "2026-03-16T06:14:36+00:00",
+  "generated_at": "2026-03-19T09:33:32+00:00",
   "domain_root_name": "心理咨询",
   "family_name": "认知行为疗法",
   "profile_id": "psychology::认知行为疗法",
   "taxonomy_axis": "疗法",
-  "parent_skill_id": "7d4c152e-cb38-5cd1-ade8-23aaaf62c840",
+  "parent_skill_id": "7c78a73e-6761-5bf6-9091-4e1285dae571",
   "parent_name": "ABC理论核心领悟引导",
   "children": [
     {
-      "skill_id": "bce8059a-36de-5d58-afea-0fdee124fe8e",
-      "name": "腹式呼吸放松法家庭作业布置",
-      "description": "在CBT中期（技能习得期）标准化布置腹式呼吸放松训练家庭作业，要求求助者每日睡前练习并泛化至日常情绪波动场景，以强化身心调节的自我效能感与生理唤醒觉察力。",
-      "child_type": "心理咨询",
+      "skill_id": "caf6bdbe-e773-59bd-ac6b-794474bff4f4",
+      "name": "不合理信念识别与归因澄清微干预",
+      "description": "在CBT中期阶段，通过结构化三步提问（事件锚定→自动思维提取→身心反应联结），引导求助者区分诱发事件（A）、信念（B）与情绪行为后果（C），聚焦识别‘绝对化要求’‘过分概括’‘糟糕至极’三类核心不合理信念，并将其与可感的生理/行为反应建立联结，强化A-B-C因果觉察。",
+      "child_type": "micro_intervention",
       "asset_node_id": "micro_intervention",
       "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
       "asset_level": 3,
-      "parent_skill_id": "7d4c152e-cb38-5cd1-ade8-23aaaf62c840",
+      "parent_skill_id": "7c78a73e-6761-5bf6-9091-4e1285dae571",
       "level_label": "微技能",
       "taxonomy_class": "认知行为疗法",
-      "applicable_when": "在CBT中期（技能习得期）标准化布置腹式呼吸放松训练家庭作业，要求求助者每日睡前练习并泛化至日常情绪波动场景，以强化身心调节的自我效能感与生理唤醒觉察力。",
+      "applicable_when": "在CBT中期阶段，通过结构化三步提问（事件锚定→自动思维提取→身心反应联结），引导求助者区分诱发事件（A）、信念（B）与情绪行为后果（C），聚焦识别‘绝对化要求’‘过分概括’‘糟糕至极’三类核心不合理信念，并将其与可感的生理/行为反应建立联结，强化A-B-C因果觉察。",
       "selector_terms": [
-        "ABC领悟达成后",
-        "求助者存在明显躯体化焦虑或情绪易激惹",
+        "求助者说‘都是因为XX我才……’",
+        "情绪反应明显强于事件客观严重性",
+        "出现‘永远’‘必须’‘完全’等绝对化词汇",
         "CBT",
-        "放松训练",
-        "家庭作业",
-        "行为激活",
-        "腹式呼吸放松法家庭作业布置"
+        "ABC模型",
+        "自动思维识别",
+        "归因澄清",
+        "不合理信念识别与归因澄清微干预"
       ],
-      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/腹式呼吸放松法家庭作业布置/SKILL.md"
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/不合理信念识别与归因澄清微干预/SKILL.md"
+    },
+    {
+      "skill_id": "c1b9da6b-a720-5c5a-9b54-e987cad656e4",
+      "name": "合理情绪疗法ABC模型应用",
+      "description": "在咨询中识别来访者非理性信念（B），并将其与诱发事件（A）和情绪行为后果（C）建立结构化联结，为后续认知重构奠定基础。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "7c78a73e-6761-5bf6-9091-4e1285dae571",
+      "level_label": "微技能",
+      "taxonomy_class": "认知行为疗法",
+      "applicable_when": "在咨询中识别来访者非理性信念（B），并将其与诱发事件（A）和情绪行为后果（C）建立结构化联结，为后续认知重构奠定基础。",
+      "selector_terms": [
+        "来访者表达持续低落、自我否定、灾难化预期；评估确认存在明显认知扭曲；咨询目标聚焦于情绪调节与信念调整",
+        "CBT",
+        "合理情绪疗法",
+        "ABC模型",
+        "认知评估",
+        "合理情绪疗法ABC模型应用"
+      ],
+      "relative_path": "心理咨询/Family技能/认知行为疗法/微技能/合理情绪疗法ABC模型应用/SKILL.md"
     }
   ]
 }

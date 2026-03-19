@@ -1,140 +1,153 @@
 ---
-id: "7d4c152e-cb38-5cd1-ade8-23aaaf62c840"
+id: "7c78a73e-6761-5bf6-9091-4e1285dae571"
 name: "ABC理论核心领悟引导"
-description: "在CBT第二咨询阶段中，通过结构化对话帮助求助者建立对ABC理论的三重领悟：①不良情绪与行为后果C源于不合理信念B而非诱发事件A；②求助者需为自身情绪与行为负责；③唯有改变B才能有效缓解C。"
+description: "在CBT咨询早期干预阶段，通过结构化对话与苏格拉底式提问，协助求助者区分事件（A）、信念（B）与情绪行为后果（C），促发对‘情绪源于信念而非事件’这一核心认知机制的觉察与个人化领悟。"
 version: "0.1.0"
 tags:
   - "CBT"
   - "ABC理论"
   - "认知领悟"
-  - "第二次咨询"
+  - "结构化会谈"
   - "认知行为疗法"
   - "profile:psychology::认知行为疗法"
   - "axis:疗法"
   - "kind:parent"
 triggers:
-  - "第二次咨询开始阶段"
-  - "求助者已初步建立咨访关系"
-  - "已完成心理评估与问题澄清"
+  - "求助者出现情绪困扰但归因模糊"
+  - "存在明显认知扭曲（如过分概括）"
+  - "需建立CBT工作同盟并启动认知重构"
 examples:
-  - input: "我这次汇报没被表扬，说明我能力很差，以后肯定什么都做不好。"
-    output: "您刚才提到‘没被表扬’是A，‘我能力很差’是B，‘觉得以后什么都做不好’是C。我们注意到，B里用了‘很差’‘肯定’这些绝对化词——它把一次结果扩大成了对整个人的判断，这种‘过分概括’可能放大了您的焦虑。"
-    notes: "点明信念类型+连接ABC+保持中立语气"
+  - input: "我汇报没被表扬，就觉得领导肯定觉得我不行，以后也不会重用我。"
+    output: "A：汇报未获表扬；B：‘领导肯定觉得我不行’（以偏概全）；C：焦虑、回避后续沟通。"
+    notes: "精准锚定B中的绝对化表述与过度推断"
+  - input: "这次考试又没考好，我真是个废物。"
+    output: "A：某次考试成绩不理想；B：‘我真是个废物’（贴标签+过度概括）；C：羞耻、放弃复习。"
+    notes: "将泛化自我评价解构为 specific A + distorted B"
 ---
 
 # ABC理论核心领悟引导
 
-在CBT第二咨询阶段中，通过结构化对话帮助求助者建立对ABC理论的三重领悟：①不良情绪与行为后果C源于不合理信念B而非诱发事件A；②求助者需为自身情绪与行为负责；③唯有改变B才能有效缓解C。
+在CBT咨询早期干预阶段，通过结构化对话与苏格拉底式提问，协助求助者区分事件（A）、信念（B）与情绪行为后果（C），促发对‘情绪源于信念而非事件’这一核心认知机制的觉察与个人化领悟。
 
 ## Prompt
 
-请用简洁、非评判性语言，引导求助者识别当前困扰中的A（事件）、B（自动信念）、C（情绪/行为反应），并指出B的不合理性（如过分概括），强调B是可调整的认知中介。
+请回忆最近一次让你感到强烈负面情绪的事件。当时发生了什么？你心里立刻想到了什么？这个想法让你产生了怎样的情绪和反应？试着区分：这件事本身（A）、你对它的解释或判断（B）、你因此感受到的情绪或做出的行为（C）。
 
 ## Objective
 
-促成求助者对ABC理论的核心认知领悟
+促成求助者对‘情绪源于信念而非事件’的核心领悟
 ## Applicable Signals
 
-- 表达自我归因偏差
-- 使用绝对化用语（如‘总是’‘完全不行’）
-- 情绪反应明显强于事件本身
+- verbalized self-blame
+- global labels (e.g., 'I always fail')
+- affective incongruence with event severity
 
 ## Contraindications
 
-- 求助者处于急性危机或自杀意念活跃期
-- 尚未建立基本信任与安全感
+- acute crisis or active suicidality without safety stabilization
+- severe cognitive impairment limiting abstract reasoning
 
 ## Intervention Moves
 
-- 命名不合理信念类型（如过分概括）
-- 将情绪后果C明确链接至B而非A
-- 使用‘您发现当您相信……时，就感到……’句式外化信念
+- Socratic questioning
+- labeling cognitive distortion
+- linking B→C explicitly
 
 ## Workflow Steps
 
-- 回顾首次咨询目标与家庭作业完成情况
-- 邀请求助者描述近期一次典型情绪困扰事件，共同标注A-B-C
-- 聚焦B的非理性特征（如以偏概全、灾难化），不否定事件A的真实性
-- 引导求助者觉察B如何驱动C，并确认其自主调整的可能性
-- 小结三重领悟，自然过渡至家庭作业布置
+- 1. Elicit a concrete recent emotional episode
+- 2. Separate A (objective event), B (automatic thought), C (emotion/behavior)
+- 3. Highlight how identical A can yield different C across people due to B
+- 4. Name the distortion in B (e.g., 'overgeneralization')
+- 5. Summarize the ABC linkage as shared understanding
 
 ## Constraints
 
-- 必须基于求助者真实生活事件展开，禁用抽象说教
-- 避免直接否定或批判求助者的信念，采用苏格拉底式提问
+- Must avoid interpreting B as 'wrong'—frame as 'unhelpful pattern'; use collaborative language ('What might be another way to see this?')
 
 ## Cautions
 
-- 防止过早进入驳斥阶段，优先确保领悟感而非逻辑正确性
-- 若求助者出现阻抗，退回共情性复述，暂缓B的挑战
+- Do not rush to challenge B before full C is validated; prioritize empathy before cognition
 
 ## Output Contract
 
-- 求助者能用自己的话简述‘不是事情让我难受，而是我对事情的想法让我难受’，并举例说明
+- {'has_abc_labeling': True, 'identifies_distortion_type': True, 'expresses_personal_relevance': True}
 
 ## Example Therapist Responses
 
 ### Example 1
 
-- Client/Input: 我这次汇报没被表扬，说明我能力很差，以后肯定什么都做不好。
-- Therapist/Output: 您刚才提到‘没被表扬’是A，‘我能力很差’是B，‘觉得以后什么都做不好’是C。我们注意到，B里用了‘很差’‘肯定’这些绝对化词——它把一次结果扩大成了对整个人的判断，这种‘过分概括’可能放大了您的焦虑。
-- Notes: 点明信念类型+连接ABC+保持中立语气
+- Client/Input: 我汇报没被表扬，就觉得领导肯定觉得我不行，以后也不会重用我。
+- Therapist/Output: A：汇报未获表扬；B：‘领导肯定觉得我不行’（以偏概全）；C：焦虑、回避后续沟通。
+- Notes: 精准锚定B中的绝对化表述与过度推断
+
+### Example 2
+
+- Client/Input: 这次考试又没考好，我真是个废物。
+- Therapist/Output: A：某次考试成绩不理想；B：‘我真是个废物’（贴标签+过度概括）；C：羞耻、放弃复习。
+- Notes: 将泛化自我评价解构为 specific A + distorted B
 
 ## Objective
 
-促成求助者对ABC理论的核心认知领悟
+促成求助者对‘情绪源于信念而非事件’的核心领悟
 ## Applicable Signals
 
-- 表达自我归因偏差
-- 使用绝对化用语（如‘总是’‘完全不行’）
-- 情绪反应明显强于事件本身
+- verbalized self-blame
+- global labels (e.g., 'I always fail')
+- affective incongruence with event severity
 
 ## Contraindications
 
-- 求助者处于急性危机或自杀意念活跃期
-- 尚未建立基本信任与安全感
+- acute crisis or active suicidality without safety stabilization
+- severe cognitive impairment limiting abstract reasoning
 
 ## Intervention Moves
 
-- 命名不合理信念类型（如过分概括）
-- 将情绪后果C明确链接至B而非A
-- 使用‘您发现当您相信……时，就感到……’句式外化信念
+- Socratic questioning
+- labeling cognitive distortion
+- linking B→C explicitly
 
 ## Workflow Steps
 
-- 回顾首次咨询目标与家庭作业完成情况
-- 邀请求助者描述近期一次典型情绪困扰事件，共同标注A-B-C
-- 聚焦B的非理性特征（如以偏概全、灾难化），不否定事件A的真实性
-- 引导求助者觉察B如何驱动C，并确认其自主调整的可能性
-- 小结三重领悟，自然过渡至家庭作业布置
+- 1. Elicit a concrete recent emotional episode
+- 2. Separate A (objective event), B (automatic thought), C (emotion/behavior)
+- 3. Highlight how identical A can yield different C across people due to B
+- 4. Name the distortion in B (e.g., 'overgeneralization')
+- 5. Summarize the ABC linkage as shared understanding
 
 ## Constraints
 
-- 必须基于求助者真实生活事件展开，禁用抽象说教
-- 避免直接否定或批判求助者的信念，采用苏格拉底式提问
+- Must avoid interpreting B as 'wrong'—frame as 'unhelpful pattern'; use collaborative language ('What might be another way to see this?')
 
 ## Cautions
 
-- 防止过早进入驳斥阶段，优先确保领悟感而非逻辑正确性
-- 若求助者出现阻抗，退回共情性复述，暂缓B的挑战
+- Do not rush to challenge B before full C is validated; prioritize empathy before cognition
 
 ## Output Contract
 
-- 求助者能用自己的话简述‘不是事情让我难受，而是我对事情的想法让我难受’，并举例说明
+- {'has_abc_labeling': True, 'identifies_distortion_type': True, 'expresses_personal_relevance': True}
 
 ## Example Therapist Responses
 
 ### Example 1
 
-- Client/Input: 我这次汇报没被表扬，说明我能力很差，以后肯定什么都做不好。
-- Therapist/Output: 您刚才提到‘没被表扬’是A，‘我能力很差’是B，‘觉得以后什么都做不好’是C。我们注意到，B里用了‘很差’‘肯定’这些绝对化词——它把一次结果扩大成了对整个人的判断，这种‘过分概括’可能放大了您的焦虑。
-- Notes: 点明信念类型+连接ABC+保持中立语气
+- Client/Input: 我汇报没被表扬，就觉得领导肯定觉得我不行，以后也不会重用我。
+- Therapist/Output: A：汇报未获表扬；B：‘领导肯定觉得我不行’（以偏概全）；C：焦虑、回避后续沟通。
+- Notes: 精准锚定B中的绝对化表述与过度推断
+
+### Example 2
+
+- Client/Input: 这次考试又没考好，我真是个废物。
+- Therapist/Output: A：某次考试成绩不理想；B：‘我真是个废物’（贴标签+过度概括）；C：羞耻、放弃复习。
+- Notes: 将泛化自我评价解构为 specific A + distorted B
 
 ## 子技能目录
-- [腹式呼吸放松法家庭作业布置](心理咨询/Family技能/认知行为疗法/微技能/腹式呼吸放松法家庭作业布置/SKILL.md) ｜ 适用：在CBT中期（技能习得期）标准化布置腹式呼吸放松训练家庭作业，要求求助者每日睡前练习并泛化至日常情绪波动场景，以强化身心调节的自我效能感与生理唤醒觉察力。
+- [不合理信念识别与归因澄清微干预](心理咨询/Family技能/认知行为疗法/微技能/不合理信念识别与归因澄清微干预/SKILL.md) ｜ 适用：在CBT中期阶段，通过结构化三步提问（事件锚定→自动思维提取→身心反应联结），引导求助者区分诱发事件（A）、信念（B）与情绪行为后果（C），聚焦识别‘绝对化要求’‘过分概括’‘糟糕至极’三类核心不合理信念，并将其与可感的生理/行为反应建立联结，强化A-B-C因果觉察。
+- [合理情绪疗法ABC模型应用](心理咨询/Family技能/认知行为疗法/微技能/合理情绪疗法ABC模型应用/SKILL.md) ｜ 适用：在咨询中识别来访者非理性信念（B），并将其与诱发事件（A）和情绪行为后果（C）建立结构化联结，为后续认知重构奠定基础。
 
 ## 选用规则（微技能目录）
-- 当目标、阶段或方法更接近 `腹式呼吸放松法家庭作业布置` 时，优先调用它。 线索：ABC领悟达成后, 求助者存在明显躯体化焦虑或情绪易激惹, CBT, 放松训练, 家庭作业
+- 当目标、阶段或方法更接近 `不合理信念识别与归因澄清微干预` 时，优先调用它。 线索：求助者说‘都是因为XX我才……’, 情绪反应明显强于事件客观严重性, 出现‘永远’‘必须’‘完全’等绝对化词汇, CBT, ABC模型
+- 当目标、阶段或方法更接近 `合理情绪疗法ABC模型应用` 时，优先调用它。 线索：来访者表达持续低落、自我否定、灾难化预期；评估确认存在明显认知扭曲；咨询目标聚焦于情绪调节与信念调整, CBT, 合理情绪疗法, ABC模型, 认知评估
 
 ## Files
 
@@ -145,9 +158,9 @@ examples:
 
 ## Triggers
 
-- 第二次咨询开始阶段
-- 求助者已初步建立咨访关系
-- 已完成心理评估与问题澄清
+- 求助者出现情绪困扰但归因模糊
+- 存在明显认知扭曲（如过分概括）
+- 需建立CBT工作同盟并启动认知重构
 
 ## Examples
 
@@ -155,12 +168,26 @@ examples:
 
 Input:
 
-  我这次汇报没被表扬，说明我能力很差，以后肯定什么都做不好。
+  我汇报没被表扬，就觉得领导肯定觉得我不行，以后也不会重用我。
 
 Output:
 
-  您刚才提到‘没被表扬’是A，‘我能力很差’是B，‘觉得以后什么都做不好’是C。我们注意到，B里用了‘很差’‘肯定’这些绝对化词——它把一次结果扩大成了对整个人的判断，这种‘过分概括’可能放大了您的焦虑。
+  A：汇报未获表扬；B：‘领导肯定觉得我不行’（以偏概全）；C：焦虑、回避后续沟通。
 
 Notes:
 
-  点明信念类型+连接ABC+保持中立语气
+  精准锚定B中的绝对化表述与过度推断
+
+### Example 2
+
+Input:
+
+  这次考试又没考好，我真是个废物。
+
+Output:
+
+  A：某次考试成绩不理想；B：‘我真是个废物’（贴标签+过度概括）；C：羞耻、放弃复习。
+
+Notes:
+
+  将泛化自我评价解构为 specific A + distorted B

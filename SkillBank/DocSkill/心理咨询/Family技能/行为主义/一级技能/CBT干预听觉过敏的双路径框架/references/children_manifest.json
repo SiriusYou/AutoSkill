@@ -1,0 +1,61 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-19T10:13:23+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "行为主义",
+  "profile_id": "psychology::行为主义",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "a4db92f3-f810-5e0a-85f7-a24c9718c7b1",
+  "parent_name": "CBT干预听觉过敏的双路径框架",
+  "children": [
+    {
+      "skill_id": "4b2fab6e-f8c2-599b-b58a-93e2886b87df",
+      "name": "ABC结构化认知重构工作表干预",
+      "description": "在CBT框架下，使用标准化ABC工作表（事件-信念-情绪/行为）引导患者识别、 empirically test，并协作生成适应性替代信念；聚焦中段治疗阶段，特别适用于功能不良认知维持特定症状（如听觉过敏）的个案。",
+      "child_type": "cognitive_restructuring",
+      "asset_node_id": "session_framework",
+      "asset_path": "family_root/treatment_framework/session_framework",
+      "asset_level": 2,
+      "parent_skill_id": "a4db92f3-f810-5e0a-85f7-a24c9718c7b1",
+      "level_label": "二级技能",
+      "taxonomy_class": "行为主义",
+      "applicable_when": "在CBT框架下，使用标准化ABC工作表（事件-信念-情绪/行为）引导患者识别、 empirically test，并协作生成适应性替代信念；聚焦中段治疗阶段，特别适用于功能不良认知维持特定症状（如听觉过敏）的个案。",
+      "selector_terms": [
+        "患者报告负性自动思维频繁出现",
+        "存在明显情绪-行为连锁反应（如焦虑→逃避）",
+        "对特定 stimuli（如声音）产生灾难化或过度个人化解释",
+        "CBT",
+        "认知重构",
+        "ABC模型",
+        "结构化工作表",
+        "家庭作业",
+        "ABC结构化认知重构工作表干预"
+      ],
+      "relative_path": "心理咨询/Family技能/行为主义/二级技能/ABC结构化认知重构工作表干预/SKILL.md"
+    },
+    {
+      "skill_id": "2917c8bf-1bb0-5c10-a125-4b1ca499edea",
+      "name": "听觉过敏ABC认知记录表",
+      "description": "结构化表格工具，用于捕捉声音刺激（A）、伴随的自动思维（B）及引发的情绪/身体反应/行为（C），支持CBT干预中的认知识别与检验。",
+      "child_type": "心理评估与干预准备",
+      "asset_node_id": "session_framework",
+      "asset_path": "family_root/treatment_framework/session_framework",
+      "asset_level": 2,
+      "parent_skill_id": "a4db92f3-f810-5e0a-85f7-a24c9718c7b1",
+      "level_label": "二级技能",
+      "taxonomy_class": "行为主义",
+      "applicable_when": "结构化表格工具，用于捕捉声音刺激（A）、伴随的自动思维（B）及引发的情绪/身体反应/行为（C），支持CBT干预中的认知识别与检验。",
+      "selector_terms": [
+        "患者能描述具体声音情境",
+        "治疗师需锚定功能障碍性认知",
+        "进入CBT认知重构阶段",
+        "ABC模型",
+        "认知日记",
+        "听觉过敏",
+        "CBT作业",
+        "听觉过敏ABC认知记录表"
+      ],
+      "relative_path": "心理咨询/Family技能/行为主义/二级技能/听觉过敏ABC认知记录表/SKILL.md"
+    }
+  ]
+}
