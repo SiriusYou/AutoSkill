@@ -31,6 +31,7 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "Extract a skill only when the USER gives concrete, reusable execution requirements. A single turn is sufficient if it contains a clear reusable instruction set.\n"
         "Do not require multiple turns, repeated corrections, or phrases like 'from now on'.\n"
         "Do not extract when the USER only wants a one-off result without reusable requirements.\n\n"
+        "Prefer a narrow, single job-to-be-done skill over a broad omnibus skill that mixes adjacent tasks.\n\n"
         "Prefer extraction only when the resulting skill is likely to be reused by this same user in future similar tasks.\n\n"
 
         "### 1) Evidence, Provenance, and Scope\n"
@@ -87,6 +88,7 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "    - # Operational Rules & Constraints\n"
         "    - # Anti-Patterns\n"
         "    - # Interaction Workflow (optional, only if explicitly evidenced by USER)\n"
+        "    - Keep prompt focused on the core instructions needed on every run; avoid stuffing long reference material into the prompt.\n"
         "- triggers: 3-5 deduplicated intent phrases that would activate this skill. They must reflect reusable task requests, not one-off entities.\n"
         "- tags: 1-6 canonical keywords in the SAME language as the conversation. Prefer task or domain words over entity names.\n"
         "- examples: 0-2 short, de-identified examples showing the task shape. Do not introduce new facts.\n"
@@ -94,9 +96,11 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "    - resources shape: {\"scripts\": [...], \"references\": [...], \"assets\": [...]}.\n"
         "    - files shape: {\"scripts/...\": \"...\", \"references/...\": \"...\", \"assets/...\": \"...\"}.\n"
         "    - scripts: only for stable deterministic helpers repeatedly useful for this workflow.\n"
-        "    - references: only for concise reusable checklists, templates, or domain notes directly evidenced by the USER.\n"
-        "    - assets: only for small reusable templates/placeholders, not large raw payloads.\n"
+        "    - references: only for longer reusable guidance, checklists, schemas, or domain notes directly evidenced by the USER.\n"
+        "    - assets: only for reusable output templates, placeholders, or small sample artifacts, not large raw payloads.\n"
         "    - use safe relative paths under scripts/, references/, or assets/ and keep file content concise.\n"
+        "    - if a resource is emitted, the prompt should mention when to read or run it.\n"
+        "    - do not duplicate the same long material in both prompt and resources.\n"
         "- confidence: float between 0.0 and 1.0, based on how specific and reusable the USER requirements are.\n\n"
 
         "### 7) Confidence Guidance\n"
@@ -148,6 +152,7 @@ def build_offline_repair_prompt(*, channel: str, max_candidates: int) -> str:
         "All textual fields must use the same language: name, description, prompt (including headings/body), triggers, tags, examples.input/examples.output/examples.notes.\n"
         "Do not mix languages across fields; if dominant language is unclear, return {\"skills\": []}.\n"
         "Preserve only concise reusable resource hints under scripts/, references/, or assets/; drop one-off raw materials.\n"
+        "Keep prompt concise and preserve progressive disclosure: longer reusable detail belongs in references/assets, not duplicated inline.\n"
         "JSON validity: escape newlines as \\n.\n"
     )
 
@@ -165,8 +170,10 @@ def build_offline_manage_decide_prompt(channel: str) -> str:
         "Compare user intent evolution, style preferences, anti-patterns, and persona alignment.\n"
         "### Channel-Specific Decision Rules:\n"
         "- MERGE (Continual Alignment): This is highly preferred for user preferences. If the candidate reflects an updated user constraint, a new formatting request, or a correction to a past habit, MERGE it to evolve and overwrite the old constraints in the target skill.\n"
+        "- MERGE (Resource Upgrade): If the candidate mainly adds a reusable script, reference note, or template for the same capability, MERGE rather than ADD.\n"
         "- DISCARD: If the candidate represents a transient, session-specific chatting pattern that does not generalize, has low future repeat-use value for this user, or if the existing skill already strictly enforces this behavior.\n"
-        "- ADD: ONLY if the user establishes a completely new workflow or distinct persona request not covered by existing profiles and likely to be reused in future interactions.\n\n"
+        "- ADD: ONLY if the user establishes a completely new workflow or distinct persona request not covered by existing profiles and likely to be reused in future interactions.\n"
+        "- Keep skills narrow: if two behaviors are adjacent but separable jobs-to-be-done, prefer keeping them as separate skills rather than merging into one broad profile.\n\n"
 
         "### Global Action Definitions:\n"
         "- \"add\": Create a completely new skill in the database.\n"
@@ -212,7 +219,8 @@ def build_offline_merge_gate_prompt(channel: str) -> str:
         "1. Penetrate the Wording: Ignore textual variance. Do not return FALSE just because the skill names, triggers, or specific examples use different vocabulary. Focus purely on 'Objective + Deliverable + Operation Class'.\n"
         "2. Incremental Evolution is SAME: If the candidate is an incremental improvement, a bug fix, or a constraint refinement of the existing skill, they share the SAME capability identity.\n"
         "3. Per-user utility view: judge identity under the assumption that retained skills should help the same target user/team in future similar tasks.\n"
-        "4. Safety Net: If fundamentally uncertain after evaluating the objective, default to `same_capability = false` to avoid destructive merging of distinct skills.\n\n"
+        "4. Keep identity narrow: adjacent tasks, neighboring formats, or related deliverables are not the same capability if they imply different execution policies.\n"
+        "5. Safety Net: If fundamentally uncertain after evaluating the objective, default to `same_capability = false` to avoid destructive merging of distinct skills.\n\n"
 
         "### Return Schema:\n"
         "{\n"
@@ -248,10 +256,11 @@ def build_offline_merge_prompt(channel: str) -> str:
         "- name: concise, searchable intent identity (snake_case).\n"
         "- description: 1-2 sentences summarizing the upgraded capability.\n"
         "- prompt: MUST be cohesive, executable Markdown. Depending on the skill type, structurally merge sections like `# Role & Objective`, `# Constraints & Style`, `# Core Workflow` (or Tool Usage), and `# Anti-Patterns`.\n"
+        "- prompt should stay concise; do not inline long material already represented by scripts/references/assets.\n"
         "- triggers: 3-5 deduplicated intent phrases.\n"
         "- tags: 1-6 canonical keywords.\n"
         "- examples: 0-3 short, highly representative de-identified examples.\n"
-        "- resources/files: keep only concise reusable artifacts under scripts/, references/, or assets/.\n"
+        "- resources/files: keep only concise reusable artifacts under scripts/, references/, or assets/; if kept, mention them once in the prompt with a clear load/run condition.\n"
         "- confidence: Float 0.0-1.0 representing the quality of the merged result.\n\n"
 
         "### JSON Validity Rules:\n"

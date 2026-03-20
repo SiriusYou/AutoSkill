@@ -34,6 +34,7 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "5. Strict Relevance Filter: Exclude branches/events that are incidental, noisy, or not required to reproduce the core success path; when uncertain, prefer excluding them.\n"
         "6. Strict Null Condition: If the trajectory represents a highly specific, non-reusable instance, or if the tool orchestration policy is unclear, output {\"skills\": []}.\n"
         "7. User-Reuse Filter: If the extracted workflow is unlikely to be reused by the same target user/team in future similar trajectories, output {\"skills\": []}.\n\n"
+        "Prefer a narrow, single job-to-be-done workflow skill over a broad skill that bundles loosely related procedures.\n\n"
 
         f"### Output Schema: {{\"skills\": [...]}} with at most {max_candidates} item(s).\n"
         "Fields per skill:\n"
@@ -45,6 +46,7 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "    - # Step-by-Step Workflow (localized heading): Precise execution sequence.\n"
         "    - # Error Handling & Fallbacks (localized heading): What to do if a step/tool fails.\n"
         "    - # Output Format & Constraints (localized heading): Format and validation criteria of final deliverable.\n"
+        "    - Keep prompt focused on the core reusable runtime instructions; move longer reusable detail into references/assets instead of duplicating it inline.\n"
         "- triggers: 3-5 deduplicated user intent phrases that map to this skill.\n"
         "- tags: 1-6 canonical keywords in the SAME language as the trajectory text.\n"
         "- examples: 0-3 short, de-identified examples showing the trigger and the expected structural outcome.\n"
@@ -55,6 +57,8 @@ def build_offline_extract_prompt(*, channel: str, max_candidates: int) -> str:
         "    - references: only for concise reusable runbooks, checklists, API notes, or templates directly supported by the trajectory.\n"
         "    - assets: only for small reusable templates/placeholders, not large one-run payloads.\n"
         "    - use safe relative paths under scripts/, references/, or assets/ and keep file content concise.\n"
+        "    - if a resource is emitted, the prompt should mention when to read or run it.\n"
+        "    - do not duplicate the same long material in both prompt and resources.\n"
         "- confidence: Float between 0.0-1.0 based on how complete and robust the trajectory's workflow was.\n\n"
 
         "### Strict Language Consistency (Mandatory):\n"
@@ -91,6 +95,7 @@ def build_offline_repair_prompt(*, channel: str, max_candidates: int) -> str:
         "All textual fields must use the same language: name, description, prompt (including headings/body), triggers, tags, examples.input/examples.output/examples.notes.\n"
         "Do not mix languages across fields; if dominant language is unclear, return {\"skills\": []}.\n"
         "Preserve only concise reusable resource hints under scripts/, references/, or assets/; drop one-off raw materials.\n"
+        "Keep prompt concise and preserve progressive disclosure: longer reusable detail belongs in references/assets, not duplicated inline.\n"
         "JSON validity: escape newlines as \\n.\n"
     )
 
@@ -108,8 +113,10 @@ def build_offline_manage_decide_prompt(channel: str) -> str:
         "Compare tool orchestration graphs, error recovery paths, and boundary conditions.\n"
         "### Channel-Specific Decision Rules:\n"
         "- MERGE (Robustness Enhancement): If the candidate demonstrates handling an edge case, a new API fallback mechanism, or an error recovery path that the existing tool-use skill lacks, MERGE to make the existing workflow more robust.\n"
+        "- MERGE (Resource Upgrade): If the candidate mainly adds a reusable script, reference runbook, or template for the same workflow capability, MERGE rather than ADD.\n"
         "- DISCARD: If the candidate is just the exact same successful tool sequence executing on different payload data, with no new structural logic/error handling, or low future repeat-use value for the same target user/team.\n"
-        "- ADD: ONLY if the agent uses a novel combination of tools to achieve a distinct objective with clear future repeat-use value.\n\n"
+        "- ADD: ONLY if the agent uses a novel combination of tools to achieve a distinct objective with clear future repeat-use value.\n"
+        "- Keep skills narrow: if two procedures are related but separable jobs-to-be-done, prefer separate skills rather than one broad workflow bundle.\n\n"
 
         "### Global Action Definitions:\n"
         "- \"add\": Create a completely new skill in the database.\n"
@@ -155,7 +162,8 @@ def build_offline_merge_gate_prompt(channel: str) -> str:
         "1. Penetrate the Wording: Ignore textual variance. Do not return FALSE just because the skill names, triggers, or specific examples use different vocabulary. Focus purely on 'Objective + Deliverable + Operation Class'.\n"
         "2. Incremental Evolution is SAME: If the candidate is an incremental improvement, a bug fix, or a constraint refinement of the existing skill, they share the SAME capability identity.\n"
         "3. Per-user utility view: judge identity under the assumption that retained skills should help the same target user/team in future similar tasks.\n"
-        "4. Safety Net: If fundamentally uncertain after evaluating the objective, default to `same_capability = false` to avoid destructive merging of distinct skills.\n\n"
+        "4. Keep identity narrow: adjacent workflows, neighboring toolchains, or related outputs are not the same capability if they imply different runtime procedures.\n"
+        "5. Safety Net: If fundamentally uncertain after evaluating the objective, default to `same_capability = false` to avoid destructive merging of distinct skills.\n\n"
 
         "### Return Schema:\n"
         "{\n"
@@ -191,10 +199,11 @@ def build_offline_merge_prompt(channel: str) -> str:
         "- name: concise, searchable intent identity (snake_case).\n"
         "- description: 1-2 sentences summarizing the upgraded capability.\n"
         "- prompt: MUST be cohesive, executable Markdown. Depending on the skill type, structurally merge sections like `# Role & Objective`, `# Constraints & Style`, `# Core Workflow`, and `# Error Handling & Fallbacks`.\n"
+        "- prompt should stay concise; do not inline long material already represented by scripts/references/assets.\n"
         "- triggers: 3-5 deduplicated intent phrases.\n"
         "- tags: 1-6 canonical keywords.\n"
         "- examples: 0-3 short, highly representative de-identified examples.\n"
-        "- resources/files: keep only concise reusable artifacts under scripts/, references/, or assets/.\n"
+        "- resources/files: keep only concise reusable artifacts under scripts/, references/, or assets/; if kept, mention them once in the prompt with a clear load/run condition.\n"
         "- confidence: Float 0.0-1.0 representing the quality of the merged result.\n\n"
 
         "### JSON Validity Rules:\n"
