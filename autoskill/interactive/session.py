@@ -1128,6 +1128,14 @@ class InteractiveSession:
         out.setdefault("updated", 0)
         out.setdefault("deleted_skill_ids", [])
         out.setdefault("stats", {})
+        try:
+            self.sdk.sync_skill_provenance_state(
+                user_id=self.config.user_id,
+                skill_ids=[str(k) for k in dict(out.get("stats") or {}).keys() if str(k).strip()],
+                delete_skill_ids=[str(x) for x in (out.get("deleted_skill_ids") or []) if str(x).strip()],
+            )
+        except Exception:
+            pass
         out["enabled"] = True
         out["judgments"] = judgments
         return out

@@ -101,8 +101,84 @@ def record_online_skill_updates(
             usage_stats=_load_usage_stats_for_skill(sdk=sdk, user_id=user_id, skill_id=str(getattr(skill, "id", "") or "")),
             version_timeline=_build_version_timeline(skill),
         )
-    store.save()
+        # Persist each update immediately so crash/interruption does not lose the latest event.
+        store.save()
     return store.summary()
+
+
+def sync_online_skill_state(
+    *,
+    sdk: Any,
+    user_id: str,
+    skill_ids: Optional[List[str]] = None,
+    delete_skill_ids: Optional[List[str]] = None,
+) -> Dict[str, Any]:
+    """Synchronizes persisted provenance rows with live version/usage state immediately."""
+
+    uid = str(user_id or "").strip() or "u1"
+    store = OnlineSkillProvenanceStore(
+        path=online_skill_provenance_path(sdk=sdk, user_id=uid),
+        user_id=uid,
+    )
+    touched: List[str] = []
+    deleted: List[str] = []
+    skills_map = store.data.setdefault("skills", {})
+
+    for sid_raw in list(delete_skill_ids or []):
+        sid = str(sid_raw or "").strip()
+        if not sid:
+            continue
+        if sid in skills_map:
+            skills_map.pop(sid, None)
+            deleted.append(sid)
+
+    for sid_raw in list(skill_ids or []):
+        sid = str(sid_raw or "").strip()
+        if not sid:
+            continue
+        row = dict(skills_map.get(sid) or {})
+        if not row:
+            skill = None
+            try:
+                skill = sdk.get(sid)
+            except Exception:
+                skill = None
+            usage_stats = _load_usage_stats_for_skill(sdk=sdk, user_id=uid, skill_id=sid)
+            if skill is None and not usage_stats:
+                continue
+            row = {
+                "skill_id": sid,
+                "name": str(getattr(skill, "name", "") or ""),
+                "current_version": str(getattr(skill, "version", "") or ""),
+                "updated_at": str(getattr(skill, "updated_at", "") or ""),
+                "updated_at_ms": 0,
+                "source_count": 0,
+                "history_count": 0,
+                "version_history_count": 0,
+                "last_channel": "",
+                "last_trigger": "",
+                "usage_stats": {},
+                "version_timeline": [],
+                "sources": [],
+                "history": [],
+            }
+        skills_map[sid] = _enrich_skill_record_live(
+            sdk=sdk,
+            user_id=uid,
+            skill_id=sid,
+            record=row,
+        )
+        touched.append(sid)
+
+    if touched or deleted:
+        store.save()
+    return {
+        "path": store.path,
+        "updated": len(touched),
+        "deleted": len(deleted),
+        "skill_ids": touched,
+        "deleted_skill_ids": deleted,
+    }
 
 
 def build_online_source_ref(

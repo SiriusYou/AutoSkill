@@ -1935,6 +1935,10 @@ class AutoSkillProxyRuntime:
             self.sdk.store.upsert(skill, raw=None)
         except Exception as e:
             return {"_status": 500, **_openai_error(str(e), code="upstream_error")}
+        try:
+            self.sdk.sync_skill_provenance_state(user_id=user_id, skill_ids=[skill_id])
+        except Exception:
+            pass
 
         return {
             "ok": True,
@@ -1980,6 +1984,10 @@ class AutoSkillProxyRuntime:
             self.sdk.store.upsert(skill, raw=None)
         except Exception as e:
             return {"_status": 500, **_openai_error(str(e), code="upstream_error")}
+        try:
+            self.sdk.sync_skill_provenance_state(user_id=user_id, skill_ids=[skill_id])
+        except Exception:
+            pass
 
         history_count = len(_history_from_metadata(dict(skill.metadata or {})))
         return {
@@ -2215,6 +2223,10 @@ class AutoSkillProxyRuntime:
         deleted = bool(self.sdk.delete(skill_id))
         if not deleted:
             return {"_status": 500, **_openai_error("Delete failed", code="upstream_error")}
+        try:
+            self.sdk.sync_skill_provenance_state(user_id=user_id, delete_skill_ids=[skill_id])
+        except Exception:
+            pass
         return {"ok": True, "deleted": True, "skill_id": skill_id}
 
     def _parse_skill_path(self, path: str) -> Tuple[str, str]:

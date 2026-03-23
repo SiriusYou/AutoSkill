@@ -759,6 +759,14 @@ class InteractiveChatApp:
         result.setdefault("updated", 0)
         result.setdefault("deleted_skill_ids", [])
         result.setdefault("stats", {})
+        try:
+            self.sdk.sync_skill_provenance_state(
+                user_id=self.config.user_id,
+                skill_ids=[str(k) for k in dict(result.get("stats") or {}).keys() if str(k).strip()],
+                delete_skill_ids=[str(x) for x in (result.get("deleted_skill_ids") or []) if str(x).strip()],
+            )
+        except Exception:
+            pass
         result["enabled"] = True
         result["judgments"] = judgments
         return result

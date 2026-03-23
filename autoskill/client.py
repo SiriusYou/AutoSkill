@@ -36,6 +36,7 @@ from .skill_provenance import (
     load_online_skill_provenance as _load_online_skill_provenance,
     online_skill_provenance_path as _online_skill_provenance_path,
     record_online_skill_updates as _record_online_skill_updates,
+    sync_online_skill_state as _sync_online_skill_state,
 )
 from .utils.time import now_iso
 
@@ -260,6 +261,22 @@ class AutoSkill:
             return fn(user_id=user_id, skill_id=skill_id)
         except Exception:
             return {"skills": {}}
+
+    def sync_skill_provenance_state(
+        self,
+        *,
+        user_id: str,
+        skill_ids: Optional[List[str]] = None,
+        delete_skill_ids: Optional[List[str]] = None,
+    ) -> Dict[str, Any]:
+        """Immediately flushes live version/usage state into the local provenance index."""
+
+        return _sync_online_skill_state(
+            sdk=self,
+            user_id=user_id,
+            skill_ids=list(skill_ids or []),
+            delete_skill_ids=list(delete_skill_ids or []),
+        )
 
     def import_openai_conversations(
         self,
