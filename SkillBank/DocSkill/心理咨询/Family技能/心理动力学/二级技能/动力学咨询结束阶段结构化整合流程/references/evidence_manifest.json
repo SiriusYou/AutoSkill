@@ -1,16 +1,16 @@
 {
   "schema": "autoskill.document.evidence_manifest.v1",
-  "generated_at": "2026-03-19T11:19:15+00:00",
+  "generated_at": "2026-03-23T09:02:27+00:00",
   "family_name": "心理动力学",
-  "skill_id": "c2ab7ade-188b-5d83-9c89-c31b0406a03b",
+  "skill_id": "6576e628-5ba3-593c-8917-e0c737177cad",
   "skill_name": "动力学咨询结束阶段结构化整合流程",
   "support_count": 1,
   "supports": [
     {
-      "support_id": "b3048396-60c0-513d-a5db-816be59bd936",
-      "doc_id": "2490db47-3ce3-598a-abb0-24bd06bebd85",
+      "support_id": "43feb2fe-3a71-5267-bc31-76ef0a6edf32",
+      "doc_id": "c9b685b1-c209-5c9a-838d-f123625fe012",
       "document_title": "1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md",
-      "source_file": "/Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/pdt/1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md",
+      "source_file": "/Users/panc/AutoSkill/Psy_markdown/pdt/1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md",
       "section": "4 咨询过程",
       "span": {
         "start": 7620,
@@ -30,13 +30,13 @@
         "asset_path": "family_root/treatment_framework/session_framework",
         "asset_level": 2,
         "visible_role": "parent",
-        "objective": "促进咨询成果内化与自主性提升",
-        "task_family": "咨询结束阶段干预",
+        "objective": "整合咨询成果并巩固自主性",
+        "task_family": "咨询结束管理",
         "method_family": "心理动力学",
         "stage": "结束阶段",
         "domain_type": "psychology",
         "taxonomy_id": "psychology",
-        "window_id": "026aef86-dc53-5d95-b058-901a79473a35",
+        "window_id": "05f50b72-ac38-5011-ba4a-8c188066fd30",
         "window_strategy": "strict",
         "anchor_hits": [
           "阶段",

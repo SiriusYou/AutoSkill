@@ -1,0 +1,68 @@
+{
+  "schema": "autoskill.document.parent_children_manifest.v1",
+  "generated_at": "2026-03-22T16:45:49+00:00",
+  "domain_root_name": "心理咨询",
+  "family_name": "行为主义",
+  "profile_id": "psychology::行为主义",
+  "taxonomy_axis": "疗法",
+  "parent_skill_id": "bd3719b5-67e1-5ff5-a05f-04ff9b88775f",
+  "parent_name": "肌肉渐进性放松训练教学与家庭作业布置",
+  "children": [
+    {
+      "skill_id": "352de055-fd9c-5778-b33a-f07ae217b2b8",
+      "name": "渐进式肌肉放松引导（标准化解剖序列）",
+      "description": "引导来访者按固定头→颈→臂→肩→背→胸→腹→臀→大腿→小腿→脚趾解剖顺序，通过收紧-释放对比体验，达成全身生理唤醒水平下降；专用于焦虑相关躯体高警觉状态的初始干预阶段。",
+      "child_type": "焦虑管理",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "bd3719b5-67e1-5ff5-a05f-04ff9b88775f",
+      "level_label": "微技能",
+      "taxonomy_class": "行为主义",
+      "applicable_when": "引导来访者按固定头→颈→臂→肩→背→胸→腹→臀→大腿→小腿→脚趾解剖顺序，通过收紧-释放对比体验，达成全身生理唤醒水平下降；专用于焦虑相关躯体高警觉状态的初始干预阶段。",
+      "selector_terms": [
+        "来访者报告明显躯体紧张症状",
+        "心率/呼吸加快等生理指标升高",
+        "需为后续认知工作建立生理稳定基础",
+        "行为主义",
+        "焦虑管理",
+        "生理调节",
+        "渐进式放松",
+        "主诉肩颈僵硬、手心出汗、坐立不安",
+        "观察到呼吸浅快、眉头紧锁、握拳",
+        "心率>90bpm或呼吸频率>20次/分钟（若可测）",
+        "渐进式肌肉放松引导（标准化解剖序列）",
+        "引导来访者按固定头→颈→臂→肩→背→胸→腹→臀→大腿→小腿→脚趾解剖顺序，通过收紧-释放对比体验，达成全身生理唤醒水平下降；专用于焦虑相关躯体高警觉状态的初始干预阶段。"
+      ],
+      "relative_path": "心理咨询/Family技能/行为主义/微技能/渐进式肌肉放松引导（标准化解剖序列）/SKILL.md"
+    },
+    {
+      "skill_id": "fa7c9efa-5b32-50a6-8f74-7d61bf5afe2a",
+      "name": "肌肉放松训练标准化教学",
+      "description": "在单次咨询中（≤15分钟）通过讲解-示范-同步练习-反馈校准四环节，教会来访者掌握可自主调用的渐进式肌肉放松技术，整合呼吸节律、躯体觉察与日常迁移提示。",
+      "child_type": "躯体调节",
+      "asset_node_id": "micro_intervention",
+      "asset_path": "family_root/treatment_framework/session_framework/micro_intervention",
+      "asset_level": 3,
+      "parent_skill_id": "bd3719b5-67e1-5ff5-a05f-04ff9b88775f",
+      "level_label": "微技能",
+      "taxonomy_class": "行为主义",
+      "applicable_when": "在单次咨询中（≤15分钟）通过讲解-示范-同步练习-反馈校准四环节，教会来访者掌握可自主调用的渐进式肌肉放松技术，整合呼吸节律、躯体觉察与日常迁移提示。",
+      "selector_terms": [
+        "来访者报告明显躯体紧张（手抖、心悸、出汗）",
+        "尚未掌握任何放松技巧",
+        "咨询时间允许10–15分钟专注教学",
+        "行为主义",
+        "躯体调节",
+        "考试焦虑",
+        "短程干预",
+        "SCL-90焦虑因子分升高",
+        "汉密尔顿焦虑量表提示躯体性焦虑突出",
+        "会谈中出现搓手、抖腿、语速加快等即时紧张表现",
+        "肌肉放松训练标准化教学",
+        "在单次咨询中（≤15分钟）通过讲解-示范-同步练习-反馈校准四环节，教会来访者掌握可自主调用的渐进式肌肉放松技术，整合呼吸节律、躯体觉察与日常迁移提示。"
+      ],
+      "relative_path": "心理咨询/Family技能/行为主义/微技能/肌肉放松训练标准化教学/SKILL.md"
+    }
+  ]
+}

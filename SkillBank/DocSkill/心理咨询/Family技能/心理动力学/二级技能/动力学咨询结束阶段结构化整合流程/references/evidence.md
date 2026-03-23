@@ -1,16 +1,16 @@
 # 动力学咨询结束阶段结构化整合流程 Evidence
 
 - family: 心理动力学
-- skill_id: c2ab7ade-188b-5d83-9c89-c31b0406a03b
+- skill_id: 6576e628-5ba3-593c-8917-e0c737177cad
 - support_count: 1
 
 ## Evidence 1
 
-- support_id: b3048396-60c0-513d-a5db-816be59bd936
+- support_id: 43feb2fe-3a71-5267-bc31-76ef0a6edf32
 - relation_type: support
 - document: 1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md
-- doc_id: 2490db47-3ce3-598a-abb0-24bd06bebd85
-- source_file: /Users/jiezhou/Desktop/工作/其他/浦江/AutoSkill/data/Psych/Psy_markdown/pdt/1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md
+- doc_id: c9b685b1-c209-5c9a-838d-f123625fe012
+- source_file: /Users/panc/AutoSkill/Psy_markdown/pdt/1例心理动力学取向的大学生心理咨询案例报告_陆瑾.md
 - section: 4 咨询过程
 - span: 7620:8168
 - confidence: 0.95
