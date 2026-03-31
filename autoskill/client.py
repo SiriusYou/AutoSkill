@@ -14,6 +14,8 @@ import json
 import inspect
 import os
 import uuid
+import hashlib
+import re
 from dataclasses import asdict
 from typing import Any, Dict, Iterable, List, Optional
 
@@ -39,6 +41,8 @@ from .skill_provenance import (
     sync_online_skill_state as _sync_online_skill_state,
 )
 from .utils.time import now_iso
+
+_WS_RE = re.compile(r"\s+")
 
 
 class AutoSkill:
@@ -324,6 +328,22 @@ class AutoSkill:
         if abs_file:
             base_md.setdefault("source_file", abs_file)
 
+        prov_store = None
+        prov_err = ""
+        try:
+            from .offline.conversation.provenance_store import (
+                ConversationProvenanceStore,
+                conversation_provenance_path,
+            )
+
+            prov_store = ConversationProvenanceStore(
+                path=conversation_provenance_path(sdk=self, user_id=user_id),
+                user_id=user_id,
+            )
+        except Exception as e:
+            prov_err = str(e)
+            prov_store = None
+
         processed = 0
         failed = 0
         errors: List[Dict[str, Any]] = []
@@ -338,6 +358,11 @@ class AutoSkill:
 
             md = dict(base_md)
             md["import_index"] = idx
+            source_ref = _build_import_conversation_source_ref(
+                messages=window,
+                source_file=abs_file or str(md.get("source_file") or "").strip(),
+                index=idx,
+            )
             try:
                 updated = self.ingest(
                     messages=window,
@@ -348,21 +373,59 @@ class AutoSkill:
                 )
                 processed += 1
                 for s in (updated or []):
-                    upserted_by_id[str(getattr(s, "id", "") or "")] = s
+                    sid = str(getattr(s, "id", "") or "")
+                    if sid:
+                        upserted_by_id[sid] = s
+                    if prov_store is not None:
+                        try:
+                            lineage_key = str((getattr(s, "metadata", {}) or {}).get("offline_requirement_lineage") or sid)
+                            prov_store.record_skill_update(
+                                skill=s,
+                                lineage_key=lineage_key,
+                                source_ref=dict(source_ref),
+                            )
+                            prov_store.maybe_save(interval=1)
+                        except Exception:
+                            pass
             except Exception as e:
                 failed += 1
                 errors.append({"index": idx, "error": str(e)})
                 if not continue_on_error:
                     raise
 
+        prov_summary: Dict[str, Any] = {}
+        if prov_store is not None:
+            try:
+                prov_store.save()
+                prov_summary = prov_store.summary()
+            except Exception as e:
+                prov_err = str(e)
+        elif prov_err:
+            prov_summary = {"path": "", "skill_count": 0, "skills": [], "error": prov_err}
+
         return {
             "total_conversations": len(conversations),
             "processed": processed,
             "failed": failed,
             "upserted_count": len(upserted_by_id),
-            "skills": [asdict(s) for s in upserted_by_id.values()],
+            "skills": [
+                {
+                    **asdict(s),
+                    "conversation_provenance": (
+                        prov_store.get_skill_record(
+                            skill_id=str(getattr(s, "id", "") or ""),
+                            max_sources=20,
+                            max_history=20,
+                        )
+                        if prov_store is not None
+                        else {}
+                    ),
+                }
+                for s in upserted_by_id.values()
+            ],
             "errors": errors,
             "source_file": abs_file or None,
+            "conversation_provenance": prov_summary,
         }
 
     def search(
@@ -550,6 +613,59 @@ def _load_openai_data_from_file(path: str) -> Any:
         return rows
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def _build_import_conversation_source_ref(
+    *,
+    messages: List[Dict[str, str]],
+    source_file: str,
+    index: int,
+) -> Dict[str, Any]:
+    """Builds a compact source reference for `import_openai_conversations` provenance."""
+
+    msgs = list(messages or [])
+    abs_source = os.path.abspath(os.path.expanduser(str(source_file or "").strip())) if str(source_file or "").strip() else ""
+    user_questions = _collect_user_questions(msgs)
+    title = f"conversation_{int(index) + 1}"
+    file_name = os.path.basename(abs_source) if abs_source else title
+    locator = f"{file_name}#conv_{int(index) + 1}"
+    seed = {
+        "source_file": abs_source,
+        "conversation_index": int(index),
+        "messages": msgs,
+    }
+    return {
+        "conversation_key": hashlib.sha1(json.dumps(seed, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest(),
+        "source_file": abs_source,
+        "conversation_index": int(index),
+        "import_index": int(index),
+        "title": title,
+        "locator": locator,
+        "message_count": int(len(msgs)),
+        "user_turn_count": int(sum(1 for m in msgs if str(m.get("role") or "").strip().lower() == "user")),
+        "primary_user_questions_preview": user_questions,
+    }
+
+
+def _collect_user_questions(messages: List[Dict[str, str]]) -> str:
+    """Builds a compact user-question preview for imported conversation provenance."""
+
+    parts: List[str] = []
+    for m in list(messages or []):
+        role = str(m.get("role") or "").strip().lower()
+        if role != "user":
+            continue
+        txt = str(m.get("content") or "").strip()
+        if not txt:
+            continue
+        parts.append(txt)
+    if not parts:
+        return "(none)"
+    text = "\n\n".join(parts)
+    text = _WS_RE.sub(" ", text).strip()
+    if len(text) <= 500:
+        return text
+    return text[:497].rstrip() + "..."
 
 
 def _extract_openai_conversations(data: Any) -> List[List[Dict[str, str]]]:

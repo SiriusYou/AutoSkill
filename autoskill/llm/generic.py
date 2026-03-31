@@ -21,7 +21,7 @@ from .openai import OpenAIChatLLM
 class GenericChatLLM(OpenAIChatLLM):
     model: str = "gpt-5.2"
     api_key: str | None = None
-    base_url: str = "http://35.220.164.252:3888/v1"
+    base_url: str = None
     timeout_s: int = 60
     max_input_chars: int = 100000
     max_tokens: int = 30000

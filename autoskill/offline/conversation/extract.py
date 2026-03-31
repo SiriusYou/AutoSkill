@@ -15,6 +15,10 @@ from autoskill.utils.skill_resources import extract_resource_paths_from_files
 from .file_loader import load_openai_units
 from .prompt_runtime import activate_offline_prompt_runtime
 from .skill_normalizer import extract_examples_from_instruction, normalize_instruction_body
+from .provenance_store import (
+    ConversationProvenanceStore,
+    conversation_provenance_path,
+)
 from .requirement_memory import (
     RequirementStatsStore,
     extract_user_requirements,
@@ -74,6 +78,10 @@ def extract_from_conversation(
     req_llm = infer_requirement_llm(sdk)
     req_stats = RequirementStatsStore(
         path=requirement_stats_path(sdk=sdk, user_id=user),
+        user_id=user,
+    )
+    provenance_store = ConversationProvenanceStore(
+        path=conversation_provenance_path(sdk=sdk, user_id=user),
         user_id=user,
     )
     worker_count = _resolve_max_workers(max_workers=max_workers, total_units=len(units))
@@ -170,8 +178,10 @@ def extract_from_conversation(
                             metadata=dict(item.get("metadata") or {}),
                             candidates=list(item.get("candidates") or []),
                             requirements=list(item.get("requirements") or []),
+                            source_ref=dict(item.get("source_ref") or {}),
                             llm=req_llm,
                             req_stats=req_stats,
+                            provenance_store=provenance_store,
                         )
                         processed += 1
                         for s in (updated or []):
@@ -212,16 +222,21 @@ def extract_from_conversation(
         req_stats.save()
     except Exception:
         pass
+    try:
+        provenance_store.save()
+    except Exception:
+        pass
 
     return {
         "total_conversations": len(units),
         "processed": processed,
         "failed": failed,
         "upserted_count": len(upserted_by_id),
-        "skills": [_skill_to_plain_dict(s) for s in upserted_by_id.values()],
+        "skills": [_skill_to_plain_dict(s, provenance_store=provenance_store) for s in upserted_by_id.values()],
         "errors": errors,
         "source_file": abs_input or None,
         "requirement_stats": req_stats.summary(),
+        "conversation_provenance": provenance_store.summary(),
     }
 
 
@@ -287,6 +302,12 @@ def _prepare_conversation_unit(
         "file_path": info["file_path"],
         "metadata": md,
         "requirements": reqs,
+        "source_ref": _build_source_ref(
+            unit=unit,
+            index=index,
+            messages=window,
+            user_questions=user_questions,
+        ),
         "candidates": candidates,
         "candidate_count": int(len(candidates or [])),
     }
@@ -345,7 +366,7 @@ def _format_full_conversation(messages: List[Dict[str, str]]) -> str:
     return "\n\n".join(out).strip() or "(empty)"
 
 
-def _skill_to_plain_dict(skill: Any) -> Dict[str, Any]:
+def _skill_to_plain_dict(skill: Any, *, provenance_store: Optional[ConversationProvenanceStore] = None) -> Dict[str, Any]:
     """Run skill to plain dict."""
     try:
         examples = []
@@ -358,7 +379,7 @@ def _skill_to_plain_dict(skill: Any) -> Dict[str, Any]:
                     "notes": (str(getattr(e, "notes", "") or "") or None),
                 }
             )
-        return {
+        out = {
             "id": str(getattr(skill, "id", "") or ""),
             "name": str(getattr(skill, "name", "") or ""),
             "description": str(getattr(skill, "description", "") or ""),
@@ -371,6 +392,13 @@ def _skill_to_plain_dict(skill: Any) -> Dict[str, Any]:
             "resource_paths": extract_resource_paths_from_files(files, max_items=32),
             "files": {str(k): str(v) for k, v in files.items() if str(k or "").strip() and str(k) != "SKILL.md"},
         }
+        if provenance_store is not None:
+            out["conversation_provenance"] = provenance_store.get_skill_record(
+                skill_id=str(getattr(skill, "id", "") or ""),
+                max_sources=20,
+                max_history=20,
+            )
+        return out
     except Exception:
         return {"id": "", "name": "", "description": "", "version": ""}
 
@@ -390,6 +418,36 @@ def _skills_compact_list(skills: Any) -> List[Dict[str, str]]:
     return out
 
 
+def _build_source_ref(
+    *,
+    unit: Dict[str, Any],
+    index: int,
+    messages: List[Dict[str, str]],
+    user_questions: str,
+) -> Dict[str, Any]:
+    """Builds one compact source reference for provenance indexing."""
+
+    source_file = str(unit.get("source_file") or "").strip()
+    title = str(unit.get("title") or "").strip() or f"conversation_{int(index) + 1}"
+    conv_idx = int(unit.get("conversation_index", index) or index)
+    user_turn_count = 0
+    for m in list(messages or []):
+        if str(m.get("role") or "").strip().lower() == "user":
+            user_turn_count += 1
+    file_name = os.path.basename(source_file) if source_file else title
+    locator = f"{file_name}#conv_{conv_idx + 1}"
+    return {
+        "source_file": source_file,
+        "conversation_index": conv_idx,
+        "import_index": int(index),
+        "title": title,
+        "locator": locator,
+        "message_count": int(len(list(messages or []))),
+        "user_turn_count": int(user_turn_count),
+        "primary_user_questions_preview": str(user_questions or "").strip(),
+    }
+
+
 def _apply_candidates_with_requirement_policy(
     *,
     sdk: AutoSkill,
@@ -397,8 +455,10 @@ def _apply_candidates_with_requirement_policy(
     metadata: Dict[str, Any],
     candidates: List[Any],
     requirements: List[Dict[str, str]],
+    source_ref: Dict[str, Any],
     llm: Any,
     req_stats: RequirementStatsStore,
+    provenance_store: ConversationProvenanceStore,
 ) -> List[Any]:
     """
     Applies candidate updates with offline requirement-memory policy.
@@ -441,6 +501,18 @@ def _apply_candidates_with_requirement_policy(
         except Exception:
             req_stats.data = stats_before
             raise
+        for skill in list(updated or []):
+            try:
+                provenance_store.record_skill_update(
+                    skill=skill,
+                    lineage_key=str(lineage_key),
+                    source_ref=dict(source_ref or {}),
+                )
+                # Persist immediately so partially processed long imports still leave
+                # a recoverable skill-to-conversation mapping on disk.
+                provenance_store.save()
+            except Exception:
+                pass
         out.extend(list(updated or []))
     return out
 
@@ -662,6 +734,12 @@ def main() -> None:
         print(
             f"requirement_stats: lineages={req_summary.get('lineage_count', 0)} "
             f"path={req_summary.get('path', '')}"
+        )
+    prov_summary = dict(result.get("conversation_provenance") or {})
+    if prov_summary:
+        print(
+            f"conversation_provenance: skills={prov_summary.get('skill_count', 0)} "
+            f"path={prov_summary.get('path', '')}"
         )
 
 
